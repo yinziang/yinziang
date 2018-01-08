@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yinziang.github.io/yinziang/2018/01/08/GitGuide/</loc>
+    
+    <lastmod>2018-01-08T12:21:31.204Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yinziang.github.io/yinziang/2018/01/07/NewStart/</loc>
     
-    <lastmod>2018-01-07T12:08:11.047Z</lastmod>
+    <lastmod>2018-01-08T11:30:33.644Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yinziang.github.io/yinziang/about/index.html</loc>
+    
+    <lastmod>2018-01-08T02:18:02.597Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>https://yinziang.github.io/yinziang/2018/01/07/hello-world/</loc>
     
     <lastmod>2018-01-07T11:55:46.547Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yinziang.github.io/yinziang/about/index.html</loc>
-    
-    <lastmod>2018-01-07T11:15:16.802Z</lastmod>
     
   </url>
   

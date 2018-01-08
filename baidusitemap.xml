@@ -4,11 +4,31 @@
 
     
   <url>
-    <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/07/NewStart/</loc>
-    <lastmod>2018-01-07T12:08:11.047Z</lastmod>
+    <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/08/GitGuide/</loc>
+    <lastmod>2018-01-08T12:21:31.204Z</lastmod>
     <data>
         <display>
-        <title>NewStart</title>
+        <title>Git Guide</title>
+        <pubTime>2018-01-08T11:17:04.000Z</pubTime>
+        
+        <tag>Study</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://yinziang.github.io/yinziang/yinziang/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/07/NewStart/</loc>
+    <lastmod>2018-01-08T11:30:33.644Z</lastmod>
+    <data>
+        <display>
+        <title>New tart</title>
         <pubTime>2018-01-07T03:10:31.000Z</pubTime>
         
         <tag>Study</tag>
@@ -22,6 +42,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/07/hello-world/</loc>
@@ -42,7 +63,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/tags/index.html</loc>
