@@ -4,12 +4,26 @@
 
     
   <url>
-    <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/08/GitGuide/</loc>
-    <lastmod>2018-01-08T12:21:31.204Z</lastmod>
+    <loc>https://yinziang.github.io/yinziang/yinziang/categories/index.html</loc>
+    <lastmod>2018-01-09T13:17:45.717Z</lastmod>
     <data>
         <display>
-        <title>Git Guide</title>
-        <pubTime>2018-01-08T11:17:04.000Z</pubTime>
+        <title>Categories</title>
+        <pubTime>2018-01-09T13:17:45.717Z</pubTime>
+        
+         
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/07/NewStart/</loc>
+    <lastmod>2018-01-09T13:08:42.426Z</lastmod>
+    <data>
+        <display>
+        <title>New Start</title>
+        <pubTime>2018-01-07T03:10:31.000Z</pubTime>
         
         <tag>Study</tag>
          
@@ -24,12 +38,12 @@
 
     
   <url>
-    <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/07/NewStart/</loc>
-    <lastmod>2018-01-08T11:30:33.644Z</lastmod>
+    <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/08/GitGuide/</loc>
+    <lastmod>2018-01-08T12:21:31.204Z</lastmod>
     <data>
         <display>
-        <title>New tart</title>
-        <pubTime>2018-01-07T03:10:31.000Z</pubTime>
+        <title>Git Guide</title>
+        <pubTime>2018-01-08T11:17:04.000Z</pubTime>
         
         <tag>Study</tag>
          
@@ -71,20 +85,6 @@
         <display>
         <title>Tags</title>
         <pubTime>2018-01-07T12:03:22.552Z</pubTime>
-        
-         
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://yinziang.github.io/yinziang/yinziang/categories/index.html</loc>
-    <lastmod>2018-01-07T10:57:57.331Z</lastmod>
-    <data>
-        <display>
-        <title>Categories</title>
-        <pubTime>2018-01-07T12:01:44.848Z</pubTime>
         
          
         </display>

@@ -12,7 +12,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[New tart]]></title>
+    <title><![CDATA[New Start]]></title>
     <url>%2Fyinziang%2F2018%2F01%2F07%2FNewStart%2F</url>
     <content type="text"><![CDATA[坑爹之路So Many Bugs !!! 1. 找不到路径已经将java文件夹设为了Source Folder，但是找不到放在根路径下的文件ac.xml，代码中不能以下面的方式访问ApplicationContext context = new ClassPathXmlApplicationContext(&quot;ac.xml&quot;); 解决办法–&gt;将文件放在Resource Folder下“正宗的Maven程序，找东西都去resource下面去找!” 2. 页面跳转 clone的项目Tomcat的路径设置不是默认的”/“。不是Project Structure的路径！ Web项目的路径 主要不是Project Structure Tomcat的路径设置]]></content>
       <categories>
