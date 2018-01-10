@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Git版本控制关于Git版本控制的一些笔记，以及在windows下的一些常规操作">
+<meta name="description" content="实践中入门，MyBatis框架小程序">
 <meta name="keywords" content="Study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Guide">
-<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/01/08/GitGuide/index.html">
+<meta property="og:title" content="MyBatis First Demo">
+<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/01/10/MyBatisFirstDemo/index.html">
 <meta property="og:site_name" content="Robert Yin">
-<meta property="og:description" content="Git版本控制关于Git版本控制的一些笔记，以及在windows下的一些常规操作">
+<meta property="og:description" content="实践中入门，MyBatis框架小程序">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-08T12:21:31.204Z">
+<meta property="og:updated_time" content="2018-01-10T12:17:11.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Guide">
-<meta name="twitter:description" content="Git版本控制关于Git版本控制的一些笔记，以及在windows下的一些常规操作">
+<meta name="twitter:title" content="MyBatis First Demo">
+<meta name="twitter:description" content="实践中入门，MyBatis框架小程序">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/01/08/GitGuide/"/>
+  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/01/10/MyBatisFirstDemo/"/>
 
 
 
 
 
-  <title>Git Guide | Robert Yin</title>
+  <title>MyBatis First Demo | Robert Yin</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/01/08/GitGuide/">
+    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/01/10/MyBatisFirstDemo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Robert Yin">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git Guide</h1>
+          <h1 class="post-title" itemprop="name headline">MyBatis First Demo</h1>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T19:17:04+08:00">
-                2018-01-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T20:12:26+08:00">
+                2018-01-10
               </time>
             
 
@@ -369,8 +369,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/yinziang/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
+                  <a href="/yinziang/categories/Java-Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Java Web</span>
                   </a>
                 </span>
 
@@ -386,7 +386,7 @@
 
           
           
-             <span id="/yinziang/2018/01/08/GitGuide/" class="leancloud_visitors" data-flag-title="Git Guide">
+             <span id="/yinziang/2018/01/10/MyBatisFirstDemo/" class="leancloud_visitors" data-flag-title="MyBatis First Demo">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -417,49 +417,51 @@
       
 
       
-        <h2 id="Git版本控制"><a href="#Git版本控制" class="headerlink" title="Git版本控制"></a>Git版本控制</h2><p>关于Git版本控制的一些笔记，以及在windows下的一些常规操作<br><a id="more"></a></p>
-<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><h5 id="1-三棵树：工作目录、暂存区域和Git仓库"><a href="#1-三棵树：工作目录、暂存区域和Git仓库" class="headerlink" title="1. 三棵树：工作目录、暂存区域和Git仓库"></a>1. 三棵树：工作目录、暂存区域和Git仓库<br></h5><p>Working Directory &lt;-&gt; Stage(Index) &lt;-&gt; Repository(Head)<br>工作目录：平时存放项目的地方<br>暂存区域：一个文件，存放临时的改动，即将提交到仓库的列表信息<br>Git仓库：最终存放版本数据的位置(HEAD指针指向最新版本)</p>
-<h5 id="2-将每个版本独立保存"><a href="#2-将每个版本独立保存" class="headerlink" title="2. 将每个版本独立保存"></a>2. 将每个版本独立保存</h5><h5 id="3-Git管理的文件的三种状态"><a href="#3-Git管理的文件的三种状态" class="headerlink" title="3. Git管理的文件的三种状态"></a>3. Git管理的文件的三种状态</h5><ul>
-<li>已修改(modified)</li>
-<li>已暂存(staged)</li>
-<li>已提交(committed)</li>
-</ul>
-<hr>
-<h3 id="Git的工作流程"><a href="#Git的工作流程" class="headerlink" title="Git的工作流程"></a>Git的工作流程</h3><h4 id="一般工作流程"><a href="#一般工作流程" class="headerlink" title="一般工作流程"></a>一般工作流程</h4><ol>
-<li>在工作目录中添加、修改文件</li>
-<li>将需要进行版本管理的文件放入暂存区域</li>
-<li>将暂存区域的文件提交到Git仓库</li>
+        <p>实践中入门，MyBatis框架小程序<br><a id="more"></a></p>
+<h3 id="1-基本学习"><a href="#1-基本学习" class="headerlink" title="1. 基本学习"></a>1. 基本学习</h3><p>MyBatis的执行流程·：</p>
+<ol>
+<li>mybatis配置文件，包括Mybatis全局配置文件和Mybatis映射文件，其中全局配置文件配置了数据源、事务等信息；映射文件配置了SQL执行相关的信息</li>
+<li>mybatis通过读取配置文件信息（全局配置文件和映射文件），构造出SqlSessionFactory，即会话工厂</li>
+<li>通过SqlSessionFactory，可以创建SqlSession(即会话,Mybatis是通过SqlSession来操作数据库的)</li>
+<li>SqlSession本身不能直接操作数据库，它是通过底层的Executor执行器接口来操作数据库的。Executor接口有两个实现类，一个是普通执行器，一个是缓存执行器（默认）</li>
+<li>Executor执行器要处理的SQL信息是封装到一个底层对象MappedStatement中。该对象包括：SQL语句、输入参数映射信息、输出结果集映射信息。其中输入参数和输出结果的映射类型包括java的简单类型、HashMap集合对象、POJO对象类型</li>
 </ol>
-<h5 id="1-在工作目录中添加、修改文件-自己操作"><a href="#1-在工作目录中添加、修改文件-自己操作" class="headerlink" title="1.在工作目录中添加、修改文件(自己操作)"></a>1.在工作目录中添加、修改文件(自己操作)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub&gt;cd MyProject</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git init</span><br><span class="line">Initialized empty Git repository in C:/Users/Administrator/Documents/GitHub/MyProject/.git/</span><br></pre></td></tr></table></figure>
-<h4 id="2-将需要进行版本管理的文件放入暂存区域-没提示信息即ok"><a href="#2-将需要进行版本管理的文件放入暂存区域-没提示信息即ok" class="headerlink" title="2.将需要进行版本管理的文件放入暂存区域(没提示信息即ok)"></a>2.将需要进行版本管理的文件放入暂存区域(没提示信息即ok)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git add README.md</span><br></pre></td></tr></table></figure>
-<h5 id="3-将暂存区域的文件提交到Git仓库"><a href="#3-将暂存区域的文件提交到Git仓库" class="headerlink" title="3.将暂存区域的文件提交到Git仓库"></a>3.将暂存区域的文件提交到Git仓库</h5><p>commit命令 双引号内是本次提交的说明</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git commit -m &quot;add a readme file&quot;</span><br><span class="line">[master (root-commit) cbdab70] add a readme file</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 README.md</span><br></pre></td></tr></table></figure>
-<h5 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h5><p> 将工作目录的文件放到Git仓库只需要两步</p>
-<ul>
-<li>-git add 文件名</li>
-<li>-git commit -m “你干了啥，新版本注释”</li>
+<h3 id="2-环境配置"><a href="#2-环境配置" class="headerlink" title="2. 环境配置"></a>2. 环境配置</h3><p>IDEA Maven项目<br>数据库环境: MySQL<br>MyBatisMaven三维坐标<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- https://mvnrepository.com/artifact/org.mybatis/mybatis --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.4.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-demo编写"><a href="#3-demo编写" class="headerlink" title="3. demo编写"></a>3. demo编写</h3><p>测试代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class UserDaoImpl implements UserDao1 &#123;</span><br><span class="line"></span><br><span class="line">    // 此处选用namespace为&quot;user&quot;，选用此处方法需将UserMapper.xml文件中namespace改过来</span><br><span class="line">    public User findUserById(int id) throws Exception &#123;</span><br><span class="line">        String resource = &quot;mybatis-config1.xml&quot;;</span><br><span class="line">        InputStream inputStream = Resources.getResourceAsStream(resource);</span><br><span class="line">        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);</span><br><span class="line">        SqlSession session = factory.openSession();</span><br><span class="line">        //---------------</span><br><span class="line">        User user = session.selectOne(&quot;user.findUserById&quot;,id); //参数一：namespace.id</span><br><span class="line">        //--------------</span><br><span class="line">        session.close();</span><br><span class="line">        return user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Mapper映射配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--&lt;mapper namespace=&quot;user&quot;&gt;--&gt;</span><br><span class="line">&lt;mapper namespace=&quot;user&quot;&gt;</span><br><span class="line">    &lt;select id=&quot;findAllUsers&quot; resultType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        SELECT * FROM USER</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;insertUser&quot; parameterType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        INSERT INTO USER(id,userName,password,age) VALUES(#&#123;id&#125;,#&#123;userName&#125;,#&#123;password&#125;,#&#123;age&#125;)</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;deleteUserById&quot; parameterType=&quot;int&quot; &gt;</span><br><span class="line">        DELETE FROM USER WHERE id=#&#123;id&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;updateUserPassword&quot; parameterType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        UPDATE USER SET password=#&#123;password&#125; WHERE id=#&#123;id&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;findUserById&quot; parameterType=&quot;int&quot; resultType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        SELECT * FROM USER WHERE id=#&#123;id&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Mapper接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public interface UserDao1 &#123;</span><br><span class="line">    public User findUserById(int id) throws Exception;</span><br><span class="line">    public List&lt;User&gt; findAllUsers() throws Exception;</span><br><span class="line">    public void insertUser(User user) throws Exception;</span><br><span class="line">    public void deleteUserById(int id) throws Exception;</span><br><span class="line">    public void updateUserPassword(User user) throws Exception;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-升级版–Mapper代理开发模式"><a href="#4-升级版–Mapper代理开发模式" class="headerlink" title="4. 升级版–Mapper代理开发模式"></a>4. 升级版–Mapper代理开发模式</h3><ul>
+<li>Mapper代理的开发方式，程序员只需要编写mapper接口（相当于dao接口），不需再编写dao实现类（Mybatis会自动的为mapper接口生成动态代理实现类）</li>
+<li>要实现mapper代理的开发方式，需要遵循一些开发规范（接口的包名，类名，参数，返回值分别对应着映射文件的namespace，id，parameterType，resultType）</li>
 </ul>
-<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-<p>显示Untracked files，工作目录新添加、修改的文件而未添加到暂存区域或提交到Git仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git add LICENSE</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   LICENSE</span><br></pre></td></tr></table></figure>
-<h4 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD</span><br></pre></td></tr></table></figure>
-<p>可以让最近一次提交到Git仓库的文件回到暂存区域</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD &lt;file&gt;</span><br></pre></td></tr></table></figure>
-<p>可以让file文件从Git仓库回到暂存区域</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git reset HEAD</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">        LICENSE</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git commit -m &quot;add a LICENSE file&quot;</span><br><span class="line">On branch master</span><br><span class="line">Untracked files:</span><br><span class="line">        LICENSE</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git add LICENSE</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   LICENSE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git commit -m &quot;add a readme file&quot;</span><br><span class="line">[master 9ceaa7a] add a readme file</span><br><span class="line"> 1 file changed, 19 insertions(+)</span><br><span class="line"> create mode 100644 LICENSE</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-<p>Note：红色表示在工作目录(?)；绿色表示在暂存区域，等待被提交。<br><br>是否？你查看了工作目录的status，那么文件就默认到暂存区域了，add就提交到Git仓库了</p>
-<h4 id="用提交到Git仓库的文件，覆盖工作目录的文件变化"><a href="#用提交到Git仓库的文件，覆盖工作目录的文件变化" class="headerlink" title="用提交到Git仓库的文件，覆盖工作目录的文件变化"></a>用提交到Git仓库的文件，覆盖工作目录的文件变化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
-<p>file，如”modified： LICENSE”</p>
-<h4 id="查看历史提交"><a href="#查看历史提交" class="headerlink" title="查看历史提交"></a>查看历史提交</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git log</span><br><span class="line">commit 76b5f782d7443442233ae5e050d3c4c8f71968b7</span><br><span class="line">Author: 2011301060014@whu.edu.cn &lt;2011301060014@whu.edu.cn&gt;</span><br><span class="line">Date:   Thu Nov 9 09:00:45 2017 +0800</span><br><span class="line"></span><br><span class="line">    change the LICENSE file</span><br><span class="line"></span><br><span class="line">commit 9ceaa7aea9f293c1189d3bcaf42f653d102a905b</span><br><span class="line">Author: 2011301060014@whu.edu.cn &lt;2011301060014@whu.edu.cn&gt;</span><br><span class="line">Date:   Wed Nov 8 21:39:24 2017 +0800</span><br><span class="line"></span><br><span class="line">    add a readme file</span><br><span class="line"></span><br><span class="line">commit cbdab700463d0b214c6f4bb08cc6bba9d30fac41</span><br><span class="line">Author: 2011301060014@whu.edu.cn &lt;2011301060014@whu.edu.cn&gt;</span><br><span class="line">Date:   Wed Nov 8 20:45:23 2017 +0800</span><br><span class="line"></span><br><span class="line">    add a readme file</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="回到过去"><a href="#回到过去" class="headerlink" title="回到过去"></a>回到过去</h4><p>参考”reset&amp;checkout.png”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">Working Directory-&gt;&gt;Stage: add</span><br><span class="line">Stage-&gt;&gt;Respository: commit</span><br><span class="line">Respository-&gt;&gt;Stage: reset</span><br><span class="line">Stage-&gt;&gt;Working Directory: checkout</span><br></pre></td></tr></table></figure>
+<ol>
+<li>mapper接口的全限定名要和mapper映射文件的namespace的值相同</li>
+<li>mapper接口的方法名称要和mapper映射文件中的statement的id相同</li>
+<li>mapper接口的方法参数只能有一个，且类型要和mapper映射文件中statement的parameterType的值保持一致</li>
+<li>mapper接口的返回值类型要和mapper映射文件中statement的resultType值或resultMap中的type值保持一致</li>
+</ol>
+<p>UserMapper映射文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper</span><br><span class="line">PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span><br><span class="line">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- mapper标签要指定namespace属性，设置为Mapper接口的全路径名--&gt;</span><br><span class="line">&lt;mapper namespace=&quot;com.yza.demo1.dao.UserDao&quot;&gt;</span><br><span class="line">    &lt;select id=&quot;findAllUsers&quot; resultType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        SELECT * FROM USER</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;insertUser&quot; parameterType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        INSERT INTO USER(id,userName,password,age) VALUES(#&#123;id&#125;,#&#123;userName&#125;,#&#123;password&#125;,#&#123;age&#125;)</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;deleteUserById&quot; parameterType=&quot;int&quot; &gt;</span><br><span class="line">        DELETE FROM USER WHERE id=#&#123;id&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;updateUserPassword&quot; parameterType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        UPDATE USER SET password=#&#123;password&#125; WHERE id=#&#123;id&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;select id=&quot;findUserById&quot; parameterType=&quot;int&quot; resultType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        SELECT * FROM USER WHERE id=#&#123;id&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Mapper接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public interface UserMapper &#123;</span><br><span class="line">    public User findUserById(int id);</span><br><span class="line">    public List&lt;User&gt; findUserAll();</span><br><span class="line">    public void insertUser(User user);</span><br><span class="line">    public void deleteUserById(int id);</span><br><span class="line">    public void updateUserPassword(User user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="报错1"><a href="#报错1" class="headerlink" title="报错1"></a>报错1</h4><p>报错具体信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for user.findUserById</span><br><span class="line">### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for user.findUserById</span><br></pre></td></tr></table></figure></p>
+<p>本质原因–mapper文件的namespace和DaoImpl路径不一致<br>mapper文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- mapper标签要指定namespace属性，不然会报错，可看做包名 --&gt;</span><br><span class="line">&lt;mapper namespace=&quot;com.yza.demo1.dao.UserDao&quot;&gt;</span><br><span class="line">&lt;!--&lt;mapper namespace=&quot;user&quot;&gt;--&gt;</span><br><span class="line">    &lt;select id=&quot;findUserById&quot; parameterType=&quot;int&quot; resultType=&quot;com.yza.demo1.entity.User&quot;&gt;</span><br><span class="line">        select * from user where id=#&#123;id&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure></p>
+<p>DaoImpl方法–&gt;此处namespace为”user”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class UserDaoImpl implements UserDao &#123;</span><br><span class="line"></span><br><span class="line">    public User findUserById(int id) throws Exception &#123;</span><br><span class="line">        String resource = &quot;mybatis-config.xml&quot;;</span><br><span class="line">        InputStream inputStream = Resources.getResourceAsStream(resource);</span><br><span class="line">        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);</span><br><span class="line">        SqlSession session = factory.openSession();</span><br><span class="line">        //---------------</span><br><span class="line">        User user = session.selectOne(&quot;user.findUserById&quot;,id); //参数一：namespace.id</span><br><span class="line">        //--------------</span><br><span class="line">        session.close();</span><br><span class="line">        return user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<ul>
+<li>namespace：必须与UserDao的全路径想匹配，这样才能使的接口与sql文件一一对应</li>
+</ul>
+<h4 id="报错2"><a href="#报错2" class="headerlink" title="报错2"></a>报错2</h4><ul>
+<li>使用Java和MyBatis时遇到的数据无法插入问题<br>解决办法–&gt;手动commit</li>
+</ul>
+<blockquote>
+<p>session关闭前不会自动提交</p>
+</blockquote>
+<ul>
+<li>手动commit、close，两次导入数据库，报错<br>解决办法：关闭是必须的，就不再提交commit</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        SqlSession sqlSession = SqlSessionFactoryUtil.openSession();</span><br><span class="line">        UserDao userDao = sqlSession.getMapper(UserDao.class);</span><br><span class="line"></span><br><span class="line">        User user = new User(3,&quot;yinziyang&quot;,&quot;111111&quot;,22);</span><br><span class="line">        userDao.insertUser(user);</span><br><span class="line"></span><br><span class="line">        //sqlSession.commit();</span><br><span class="line">        sqlSession.close();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h4 id="附录-–-Windows初次使用Git前的配置"><a href="#附录-–-Windows初次使用Git前的配置" class="headerlink" title="附录 – Windows初次使用Git前的配置"></a>附录 – Windows初次使用Git前的配置</h4><p>在命令行模式里输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-git config -- global user.name &quot;username&quot;</span><br><span class="line">-git config -- global user.email &quot;mail&quot;</span><br></pre></td></tr></table></figure>
-<p>然后输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-<p>出现邮箱和用户名即ok</p>
+<h3 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h3><p>MyBatisUtil工具类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">import org.apache.ibatis.io.Resources;</span><br><span class="line">import org.apache.ibatis.session.*;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line"></span><br><span class="line">public class SqlSessionFactoryUtil &#123;</span><br><span class="line"></span><br><span class="line">    private static SqlSessionFactory sqlSessionFactory;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 初始化sqlSessionFactory</span><br><span class="line">     */</span><br><span class="line">    static &#123;</span><br><span class="line">        getSqlSessionFactory();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取SqlSessionFactory</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public static SqlSessionFactory getSqlSessionFactory() &#123;</span><br><span class="line">        if(sqlSessionFactory==null) &#123;</span><br><span class="line">            InputStream inputStream = null;</span><br><span class="line">            try &#123;</span><br><span class="line">                inputStream = Resources.getResourceAsStream(&quot;mybatis-config.xml&quot;);</span><br><span class="line">                sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);</span><br><span class="line">            &#125; catch(Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return sqlSessionFactory;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取SqlSession</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public static SqlSession openSession() &#123;</span><br><span class="line">        return sqlSessionFactory.openSession();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 关闭SqlSession</span><br><span class="line">      * @param sqlSession</span><br><span class="line">     */</span><br><span class="line">    public static void clSSoseSession(SqlSession sqlSession) &#123;</span><br><span class="line">        if(sqlSession != null) &#123;</span><br><span class="line">            sqlSession.close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.csdn.net/qq_32166627/article/details/70741729" target="_blank" rel="noopener"> MyBatis学习（1）：Mybatis使用详解和入门案例</a></p>
 
       
     </div>
@@ -490,8 +492,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/yinziang/2018/01/07/NewStart/" rel="next" title="New Start">
-                <i class="fa fa-chevron-left"></i> New Start
+              <a href="/yinziang/2018/01/09/workreport/" rel="next" title="Work Report">
+                <i class="fa fa-chevron-left"></i> Work Report
               </a>
             
           </div>
@@ -499,10 +501,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/yinziang/2018/01/09/workreport/" rel="prev" title="Work Report">
-                Work Report <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -650,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git版本控制"><span class="nav-number">1.</span> <span class="nav-text">Git版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-number">1.1.</span> <span class="nav-text">Note</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-三棵树：工作目录、暂存区域和Git仓库"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">1. 三棵树：工作目录、暂存区域和Git仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-将每个版本独立保存"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">2. 将每个版本独立保存</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Git管理的文件的三种状态"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">3. Git管理的文件的三种状态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git的工作流程"><span class="nav-number">1.2.</span> <span class="nav-text">Git的工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一般工作流程"><span class="nav-number">1.2.1.</span> <span class="nav-text">一般工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-在工作目录中添加、修改文件-自己操作"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">1.在工作目录中添加、修改文件(自己操作)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-将需要进行版本管理的文件放入暂存区域-没提示信息即ok"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.将需要进行版本管理的文件放入暂存区域(没提示信息即ok)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-将暂存区域的文件提交到Git仓库"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">3.将暂存区域的文件提交到Git仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实战"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">实战</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看状态"><span class="nav-number">1.2.3.</span> <span class="nav-text">查看状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回滚"><span class="nav-number">1.2.4.</span> <span class="nav-text">回滚</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用提交到Git仓库的文件，覆盖工作目录的文件变化"><span class="nav-number">1.2.5.</span> <span class="nav-text">用提交到Git仓库的文件，覆盖工作目录的文件变化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看历史提交"><span class="nav-number">1.2.6.</span> <span class="nav-text">查看历史提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回到过去"><span class="nav-number">1.2.7.</span> <span class="nav-text">回到过去</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附录-–-Windows初次使用Git前的配置"><span class="nav-number">1.2.8.</span> <span class="nav-text">附录 – Windows初次使用Git前的配置</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基本学习"><span class="nav-number">1.</span> <span class="nav-text">1. 基本学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-环境配置"><span class="nav-number">2.</span> <span class="nav-text">2. 环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-demo编写"><span class="nav-number">3.</span> <span class="nav-text">3. demo编写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-升级版–Mapper代理开发模式"><span class="nav-number">4.</span> <span class="nav-text">4. 升级版–Mapper代理开发模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#报错1"><span class="nav-number">4.1.</span> <span class="nav-text">报错1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#报错2"><span class="nav-number">4.2.</span> <span class="nav-text">报错2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录："><span class="nav-number">5.</span> <span class="nav-text">附录：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
