@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SSM框架电商网站实训项目--第二周总结]]></title>
+    <url>%2Fyinziang%2F2018%2F01%2F19%2FProjectWeekTwo%2F</url>
+    <content type="text"><![CDATA[描述本人本周的工作情况，包括学习内容、项目工作内容和个人任务完成进度主要学习了： JS在前端的一些基础用法 项目工作方面： 讨论具体的需求实现问题 参与小组的项目原型文档的编写 完成商品评论模块需要实现的的类和函数 个人任务完成进度： 电商网站的商品评价功能从数据库到前台展示的编写]]></content>
+      <categories>
+        <category>Java Web</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+        <tag>Work</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SSM框架电商网站实训项目--第一周总结]]></title>
     <url>%2Fyinziang%2F2018%2F01%2F12%2FProjectWeekOne%2F</url>
     <content type="text"><![CDATA[描述本人本周的工作情况，包括学习内容、项目工作内容和个人任务完成进度主要学习了： Spring和MyBatis框架的基本知识、核心配置 SSM框架的整合demo–小型图书管理系统编写 项目工作方面： 帮助确立了小组公共的IDE和版本控制工具 参与需求文档的讨论，了解电商网站的几大模块 思考这些模块该如何实现，准备项目原型文档的编写 个人任务完成进度： 电商网站的开发，正在如火如荼的进行前期知识补强，并且有积极参与小组的需求讨论，特别是需求文档中和自己有关的部分]]></content>
