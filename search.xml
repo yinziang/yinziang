@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[春招准备]]></title>
+    <url>%2Fyinziang%2F2018%2F01%2F28%2FMyPreparation%2F</url>
+    <content type="text"><![CDATA[用三周自由时间、三周实训准备春招找实习 方向: Java Web开发工程师 主要需要准备以下内容： Java Core 集合框架的底层实现原理 并发编程相关 Java虚拟机JVM Java Web项目和相关知识 Web项目 数据库 Spring SSM框架Spring 计算机网络 数据结构和算法 年前三周主要目标(按优先级从高到低)： 数据结构和算法 复习王道数据结构和已做笔记 算法题首先结束《剑指Offer》，牛客网上余31道，然后再做结合LeetCode整理 Java Core 学习《Java编程思想》(参考《Java核心技术卷一》) 结合往年考题和牛客网的题库复习 Java虚拟机JVM 主攻《深入理解Java虚拟机》，学习相关概念 结合往年考题 计算机网络的复习 复习王道，做好笔记]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+        <tag>Work</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SSM框架电商网站实训项目--第二周总结]]></title>
     <url>%2Fyinziang%2F2018%2F01%2F19%2FProjectWeekTwo%2F</url>
     <content type="text"><![CDATA[描述本人本周的工作情况，包括学习内容、项目工作内容和个人任务完成进度主要学习了： JS在前端的一些基础用法 项目工作方面： 讨论具体的需求实现问题 参与小组的项目原型文档的编写 完成商品评论模块需要实现的的类和函数 个人任务完成进度： 电商网站的商品评价功能从数据库到前台展示的编写]]></content>
