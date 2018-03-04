@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[算法&OJ--其他--接水装水问题]]></title>
+    <url>%2Fyinziang%2F2018%2F03%2F04%2FAlgo-OJ-Others-2%2F</url>
+    <content type="text"><![CDATA[总结LintCode上两类看起来类似的问题 装水问题 接水问题 LintCode-383.装最多水的容器 给定 n 个非负整数 a1, a2, …, an, 每个数代表了坐标中的一个点 (i, ai)。画 n 条垂直线，使得 i 垂直线的两个端点分别为(i, ai)和(i, 0)。找到两条线，使得其与 x 轴共同构成一个容器，以容纳最多水。注意：容器不可倾斜。 暴力遍历 每条线和之前所有线计算 记录最大值 时间复杂度：O(n^2) 示例解法 两个指针分别从数组两端开始向中间遍历(分别找到高度不为零的竖边) 每次计算面积，并记录最大值 将较低高度的指针移动一位 遍历整个数组 时间复杂度：O(n) 就示例解法me的思考 从两端逼近，容器X轴边长单调减小，要使面积增大的话，必须增大宽，所以保留长的竖边 1234567891011121314151617181920212223// 示例AC代码public class Solution &#123; // for any i, the maxium area will be the farthest j that has a[j] &gt; a[i]; public int maxArea(int[] height) &#123; if(height == null || height.length &lt; 2) &#123; return 0; &#125; int max = 0; int left = 0; int right = height.length -1; while(left &lt; right) &#123; max = Math.max( max, (right - left) * Math.min(height[left],height[right])); if(height[left] &lt; height[right])&#123; left++; &#125; else &#123; right--; &#125; &#125; return max; &#125;&#125; LintCode-363.接雨水 系列一 Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining. 注意：此时竖边是有宽度的。 此题本质：某一bar的接水量=min(左边bar最大高度，右边bar最大高度)-bar高 最直接的做法 双数组，一个储存左边bar最大高度，一个储存右边bar最大高度 有点绕的最优解 两个记录最大高度的数组，自最大值出现后就不会被调用了(因为取得是min值) 采用对撞型指针，每次让高度较小的指针移动即可 该指针处接水量即为该方向最大值减去该处bar高 循环直至两指针相遇于最高处 123456789101112131415161718192021222324252627public int trapRainWater(int[] heights) &#123; // 双指针问题 if(heights==null || heights.length&lt;2) &#123; return 0; &#125; int water = 0; int left = 0; int right = heights.length - 1; int lMax = 0; int rMax = 0; while(left &lt; right) &#123; lMax = max(lMax, heights[left]); rMax = max(rMax, heights[right]); if(lMax &lt; rMax) &#123; water += lMax - heights[left]; left++; &#125; else &#123; water += rMax - heights[right]; right--; &#125; &#125; return water;&#125; public int max(int a, int b) &#123; return a&gt;b?a:b;&#125; LintCode-364.接雨水 系列二 Given n x m non-negative integers representing an elevation map 2d where the area of each cell is 1 x 1, compute how much water it is able to trap after raining. emmm 此题感觉难度过大。暂不研究]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[算法&OJ--其他--背包问题]]></title>
+    <url>%2Fyinziang%2F2018%2F03%2F03%2FAlgo-OJ-Others-1%2F</url>
+    <content type="text"><![CDATA[总结两类 01背包问题 部分背包问题 01背包问题 往背包中装物品。物品有重量和价值属性。每个物品只有一件且不能分割，在不超过背包容量的同时，如何选取物品，使得背包所装的价值最大（背包可以装不满） 经典的DP动态规划问题 具有最优子结构(在此略去证明过程) 递归求解 每个物品都可以选择放入或不放入，n个物品就需要做n次选择 设f[i][w]表示前i件物品恰放入一个容量为w的背包可获得的最大价值 如果放入第i件物品，则f[i][w] = f[i-1][w-w[i]] + v[i] 如果不放入第i件，则f[i][w] = f[i-1][w] 显然有f[i][w] = max(f[i-1][w-w[i]]+v[i], f[i-1][w) 结合以下实例来理解：往容量的50的包里装(W,A)分别为以下的物品(10,60)、(20,100)、(30,120) 优化空间 采用一维数组来记录每次的判断结果 最终能完全利用该背包的必然是最大价值(即数组最后一个元素) 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455// LintCode-125.背包问题 二/** * 问题描述：给出n个物品的体积A[i]和其价值V[i]，将他们装入一个大小为m的背包，最多能装入的总价值有多大？ * @param m: An integer m denotes the size of a backpack * @param A: Given n items with size A[i] * @param V: Given n items with value V[i] * @return: The maximum value */public int backPackII(int m, int[] A, int[] V) &#123; // 边界情况 if(A==null || V==null || A.length!=V.length || A.length==0 || m&lt;=0) &#123; return -1; &#125; int[] dp = new int[m+1]; int max = 0; for(int i=0; i&lt;A.length; i++) &#123; for(int j=m; j&gt;=A[i]; j--) &#123; if(dp[j-A[i]]+V[i] &gt; dp[j]) &#123; dp[j] = dp[j-A[i]]+V[i]; &#125; if(dp[j] &gt; max) &#123; max = dp[j]; &#125; &#125; &#125; return max;&#125;// 变式// LintCode-92.背包问题/** * 问题描述：在n个物品中挑选若干物品装入背包，最多能装多满？假设背包的大小为m，每个物品的大小为A[i]。(不可切割物品) * @param m: An integer m denotes the size of a backpack * @param A: Given n items with size A[i] * @return: The maximum size */public int backPack(int m, int[] A) &#123; if(A==null || A.length==0 || m&lt;=0) return -1; int n = A.length; int[] dp = new int[m+1]; int max = -1; for(int i=0 ;i&lt;n; i++) &#123; for(int j=m; j&gt;=A[i]; j--) &#123; if(dp[j-A[i]] + A[i] &gt; dp[j]) &#123; dp[j] = dp[j-A[i]] + A[i]; if(dp[j] &gt; max) &#123; max = dp[j]; &#125; &#125; &#125; &#125; return max;&#125; 部分背包问题 问题描述 思路 计算出平均价值重量value/weight 按照value/weight从高到低填充背包 最后剩下的装不下的空间，按照该均值乘以剩余容量 物品 重量 价值 单位重量的价值量 A 10 60 6 B 20 100 5 C 30 120 4 例如有如下问题 背包容量是50，求背包可以装三种物品的最大价值(物品可以被拆分) 由于可以拆分，考虑的是单位重量的价值量 可以轻易求得最优价值是：60+100+4*(50-30)=240 完全背包问题 待整理ing 参考资料 动态规划之详细分析0-1背包问题 0-1背包问题入门 0-1背包问题]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[春招准备]]></title>
     <url>%2Fyinziang%2F2018%2F01%2F28%2FMyPreparation%2F</url>
     <content type="text"><![CDATA[用三周自由时间、三周实训准备春招找实习 方向: Java Web开发工程师 主要需要准备以下内容： Java Core 集合框架的底层实现原理 并发编程相关 Java虚拟机JVM Java Web项目和相关知识 Web项目 数据库 Spring SSM框架Spring 计算机网络 数据结构和算法 年前三周主要目标(按优先级从高到低)： 数据结构和算法 复习王道数据结构和已做笔记 算法题首先结束《剑指Offer》，牛客网上余31道，然后再做结合LeetCode整理 Java Core 学习《Java编程思想》(参考《Java核心技术卷一》) 结合往年考题和牛客网的题库复习 Java虚拟机JVM 主攻《深入理解Java虚拟机》，学习相关概念 结合往年考题 计算机网络的复习 复习王道，做好笔记]]></content>
