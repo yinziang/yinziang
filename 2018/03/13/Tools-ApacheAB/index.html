@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="面向对象三大特性之一的多态 多态是什么 Java中的多态 运行时类别识别">
+<meta name="description" content="利用Apache ab对网站的性能测试">
 <meta name="keywords" content="Study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaCore 1.多态和运行时类别识别">
-<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/02/28/JavaCore-1-polymorphism/index.html">
+<meta property="og:title" content="ab - Apache HTTP server benchmarking tool">
+<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/03/13/Tools-ApacheAB/index.html">
 <meta property="og:site_name" content="Robert Yin">
-<meta property="og:description" content="面向对象三大特性之一的多态 多态是什么 Java中的多态 运行时类别识别">
+<meta property="og:description" content="利用Apache ab对网站的性能测试">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-05T06:09:12.637Z">
+<meta property="og:updated_time" content="2018-03-13T12:35:45.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaCore 1.多态和运行时类别识别">
-<meta name="twitter:description" content="面向对象三大特性之一的多态 多态是什么 Java中的多态 运行时类别识别">
+<meta name="twitter:title" content="ab - Apache HTTP server benchmarking tool">
+<meta name="twitter:description" content="利用Apache ab对网站的性能测试">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/02/28/JavaCore-1-polymorphism/"/>
+  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/03/13/Tools-ApacheAB/"/>
 
 
 
 
 
-  <title>JavaCore 1.多态和运行时类别识别 | Robert Yin</title>
+  <title>ab - Apache HTTP server benchmarking tool | Robert Yin</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/02/28/JavaCore-1-polymorphism/">
+    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/03/13/Tools-ApacheAB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Robert Yin">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaCore 1.多态和运行时类别识别</h1>
+          <h1 class="post-title" itemprop="name headline">ab - Apache HTTP server benchmarking tool</h1>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T16:00:00+08:00">
-                2018-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T17:00:00+08:00">
+                2018-03-13
               </time>
             
 
@@ -369,8 +369,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/yinziang/categories/Java-Core/" itemprop="url" rel="index">
-                    <span itemprop="name">Java Core</span>
+                  <a href="/yinziang/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
                   </a>
                 </span>
 
@@ -386,7 +386,7 @@
 
           
           
-             <span id="/yinziang/2018/02/28/JavaCore-1-polymorphism/" class="leancloud_visitors" data-flag-title="JavaCore 1.多态和运行时类别识别">
+             <span id="/yinziang/2018/03/13/Tools-ApacheAB/" class="leancloud_visitors" data-flag-title="ab - Apache HTTP server benchmarking tool">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,72 +418,93 @@
 
       
         <ul>
-<li>面向对象三大特性之一的多态<ul>
-<li>多态是什么</li>
-<li>Java中的多态</li>
-<li>运行时类别识别</li>
-</ul>
-</li>
+<li>利用Apache ab对网站的性能测试</li>
 </ul>
 <a id="more"></a>
-<h3 id="运行时类型识别-RTTI-Run-Time-Type-Identification"><a href="#运行时类型识别-RTTI-Run-Time-Type-Identification" class="headerlink" title="运行时类型识别(RTTI, Run-Time Type Identification)"></a>运行时类型识别(RTTI, Run-Time Type Identification)</h3><ul>
-<li>维护类的相关信息</li>
-<li>多态是基于RTTI实现的</li>
-<li>RTTI主要功能由Class类实现</li>
+<ul>
+<li>ab每次只能测试一个URL，适合做重复压力测试，支持POST方式</li>
+<li>压力测试<ul>
+<li>定义</li>
+<li>关键指标<ul>
+<li>服务器有关的最重要两个指标，其主要反映的是QPS和RT</li>
+<li>每秒请求数(即服务器的吞吐量) – Requests per second</li>
+<li>用户平均请求等待时间(请求延迟) – Time per request</li>
 </ul>
-<h3 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h3><ul>
-<li>Class类是”类的类”(class of classes)</li>
+</li>
+<li>服务器压力测试的若干指标<ul>
+<li>吞吐率<ul>
+<li>服务器处理并发请求的能力</li>
+<li>计算公式为: 总请求数 / 完成所有请求花费的总时间</li>
+<li>需要注意的是，吞吐率不能脱离并发数(并发用户数)而单独存在，在不同的并发数情况下，即使总请求数一样，并发数也可能会不一样</li>
 </ul>
-<blockquote>
-<p>如果说类是对象的抽象和集合的话，那么Class类就是对类的抽象和集合</p>
-</blockquote>
-<h4 id="多态的原理"><a href="#多态的原理" class="headerlink" title="多态的原理"></a>多态的原理</h4><ul>
-<li>每一个Class类的对象代表一个其他的类</li>
-<li>当调用对象的getClass() 方法时，就得到对应Class对象的引用</li>
-<li>Java中每个对象都有相应的Class类对象，因此随时能通过Class对象知道某个对象”真正”所属的类<ul>
-<li>无论对引用进行怎样的类型转换，对象本身所对应的Class对象都是同一个</li>
-<li>通过某个引用调用方法时，Java总能找到正确的Class类中所定义的方法，并执行该Class类中的代码</li>
-<li>由于Class对象的存在，Java不会因为类型的向上转换而迷失</li>
+</li>
+<li>并发连接数<ul>
+<li>并发连接数指某个时刻服务器处理的连接数</li>
+<li>此概念的某个时刻是一个特定的时间点</li>
+<li>并发用户数的概念和并发连接数密切相关，并发连接数一定大于等于并发用户数(一个用户可能同时发送多个并发请求)</li>
+</ul>
+</li>
+<li>用户请求平均等待时间<ul>
+<li>处理完所有请求花费总时间 / 并发用户数</li>
+</ul>
+</li>
+<li>服务器平均请求完成时间<ul>
+<li>处理完所有请求所花费时间/总请求数</li>
+<li>吞吐率的倒数，也和并发数密切相关，不能脱离并发数来描述服务器平均请求等待时间</li>
 </ul>
 </li>
 </ul>
-<h3 id="Class类的加载"><a href="#Class类的加载" class="headerlink" title="Class类的加载"></a>Class类的加载</h3><ul>
-<li>当Java创建某个类的对象，比如Human类对象时，Java会检查内存中是否有相应的Class对象<ul>
-<li>如果内存中没有相应的Class对象，那么Java会在.class文件中寻找Human类的定义，并加载Human类的Class对象</li>
+</li>
 </ul>
 </li>
-<li>在Class对象加载成功后，其他Human对象的创建和相关操作都将参照该Class对象</li>
 </ul>
-<hr>
-<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><blockquote>
-<p>多态：一个对象变量可以指示多种实际类型的现象。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A(多态)--&gt;B(重载Overloading)</span><br><span class="line">A(多态)--&gt;C(重写Overriding)</span><br></pre></td></tr></table></figure>
-<h5 id="三个必要条件"><a href="#三个必要条件" class="headerlink" title="三个必要条件"></a>三个必要条件</h5><ol>
-<li>要有继承</li>
-<li>要有重写</li>
-<li>父类引用指向子类对象</li>
+<h3 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h3><ul>
+<li>标准可参考国外的3/5/10原则：<ol>
+<li>在3秒钟之内，页面给予用户响应并有所显示，可认为是“很不错的”</li>
+<li>在3~5秒钟内，页面给予用户响应并有所显示，可认为是“好的”</li>
+<li>在5~10秒钟内，页面给予用户响应并有所显示，可认为是“勉强接受的”</li>
+<li>超过10秒就让人有点不耐烦了，用户很可能不会继续等待下去</li>
 </ol>
-<p>Java语言中对象变量是多态的。如一个Employee变量既可以引用一个Employee类对象，也可以引用Employee类的任何一个子类的对象（Manager、Secretary、Programmer和Executive[单继承，通过Manager传递，Manager能引用Executive]）。<br><br><strong>不能将超类的引用赋给子类变量，不是所有的超类(human)都是子类(scientist)。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A(Employee)--&gt;B(Manager)</span><br><span class="line">A--&gt;C(Secretary)</span><br><span class="line">A--&gt;D(Programmer)</span><br><span class="line">B--&gt;E(Executive)</span><br></pre></td></tr></table></figure>
-<h4 id="动态绑定"><a href="#动态绑定" class="headerlink" title="动态绑定"></a>动态绑定</h4><p>在运行时能够自动地选择调用那个方法的现象称为<strong>动态绑定（dynamic binding）</strong>。</p>
-<blockquote>
-<p>在执行期间（而非编译期间）判断所引用对象的实际类型，根据其实际的类型调用其相应的方法。<br><br>方法储存在代码区(Code Seg)，找到对应方法需要函数指针，而这个指针在new对象的时候被初始化，故可以迟邦定；而且方法的调用可以透过对象变量引用，看到变量的本质类型。</p>
-</blockquote>
-<p>当程序运行，并且采用动态绑定调用方法时，虚拟机一定调用与x所引用对象的实际类型最合适的那个类的方法。假设x的实际类型是D（C的子类），如果D 类定义了该<strong>签名</strong>（方法的名字和参数列表）就直接调用，否则将在D类的超类中寻找，以此类推（超类的超类）。</p>
-<h5 id="动态绑定重要特性：易扩展性。"><a href="#动态绑定重要特性：易扩展性。" class="headerlink" title="动态绑定重要特性：易扩展性。"></a>动态绑定重要特性：易扩展性。</h5><p>如，假设增加一个新类Executive，并且变量e有可能引用这个类的对象，我们不需要对包含调用e.f()的代码进行重新编译。如果e恰好引用一个Executive类的对象，就会自动地调用Executive.f()方法。</p>
-<h4 id="静态绑定"><a href="#静态绑定" class="headerlink" title="静态绑定"></a>静态绑定</h4><p>如果是方法、方法、方法或者构造器，那么编译器可以准确知道应该调用哪个方法，将这种调用方式成为<strong>静态绑定（static binding）</strong>。</p>
-<h4 id="对象转型-casting"><a href="#对象转型-casting" class="headerlink" title="对象转型(casting)"></a>对象转型(casting)</h4><ul>
-<li>一个基类的引用类型变量可以“指向”其子类的对象。</li>
-<li>一个基类的引用不可以访问其子类对象新增加的成员（属性和方法）。</li>
-<li>可以使用用引用变量 instanceof类名来判断该引用型变量所“指向”的对象是否属于该类或该类的子类。</li>
-<li>子类的对象可以当作基类的对象来使用称作向上转型(upcasting)，反之称为向下转型(downcasting)。</li>
+</li>
+<li>大佬指导<ul>
+<li>可适当因人而异</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yza.myJavaBasic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectCast</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Animal a = <span class="keyword">new</span> Animal(<span class="string">"yin"</span>);</span><br><span class="line">        Dog d = <span class="keyword">new</span> Dog(<span class="string">"yin"</span>, <span class="string">"black"</span>);</span><br><span class="line">        Cat c = <span class="keyword">new</span> Cat(<span class="string">"yin"</span>, <span class="string">"black"</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(a <span class="keyword">instanceof</span> Animal);</span><br><span class="line">        System.out.println(d <span class="keyword">instanceof</span> Animal);</span><br><span class="line">        System.out.println(c <span class="keyword">instanceof</span> Animal);</span><br><span class="line">        System.out.println(a <span class="keyword">instanceof</span> Dog);</span><br><span class="line"></span><br><span class="line">        a = d;</span><br><span class="line">        System.out.println(a <span class="keyword">instanceof</span> Animal);</span><br><span class="line">        System.out.println(a <span class="keyword">instanceof</span> Dog);</span><br><span class="line">        System.out.println(a.getClass());</span><br><span class="line">        Dog d1 = (Dog) a;</span><br><span class="line">        System.out.println(d1.furColor);</span><br><span class="line">        <span class="comment">// dynamic binding</span></span><br><span class="line">        Animal animal = <span class="keyword">new</span> Animal(<span class="string">"yin"</span>);</span><br><span class="line">        System.out.println(animal);</span><br><span class="line">        animal = d;</span><br><span class="line">        System.out.println(animal);</span><br><span class="line">        animal = c;</span><br><span class="line">        System.out.println(animal);</span><br><span class="line">        <span class="comment">// casting的可扩展性</span></span><br><span class="line">        test(<span class="keyword">new</span> Animal(<span class="string">"yin"</span>));</span><br><span class="line">        test(d);</span><br><span class="line">        test(c);</span><br><span class="line">        <span class="comment">// 多态的可扩展性</span></span><br><span class="line">        Lady l1 = <span class="keyword">new</span> Lady(<span class="string">"huang"</span>, c);</span><br><span class="line">        Lady l2 = <span class="keyword">new</span> Lady(<span class="string">"xiong"</span>, d);</span><br><span class="line">        l1.petEnjoy();</span><br><span class="line">        l2.petEnjoy();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(Animal a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(a <span class="keyword">instanceof</span> Animal) &#123;</span><br><span class="line">            System.out.println(<span class="string">"test "</span> + a);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(a <span class="keyword">instanceof</span> Dog) &#123;</span><br><span class="line">            Dog dog  = (Dog) a;</span><br><span class="line">            System.out.println(<span class="string">"test "</span> + dog + <span class="string">" "</span> + dog.furColor);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(a <span class="keyword">instanceof</span> Cat) &#123;</span><br><span class="line">            Cat cat = (Cat)a;</span><br><span class="line">            System.out.println(<span class="string">"test "</span> + cat + <span class="string">" "</span> + cat.catColor);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enjoy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"叫声。。。。。。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    String furColor;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name, String color)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">        <span class="keyword">this</span>.furColor = color;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Dog "</span> + <span class="keyword">super</span>.toString() + <span class="string">" "</span> + furColor;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enjoy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"狗叫。。。。。。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    String catColor;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Cat</span><span class="params">(String name, String catColor)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">        <span class="keyword">this</span>.catColor = catColor;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Cat "</span> + <span class="keyword">super</span>.toString() + <span class="string">" "</span> + catColor;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enjoy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"猫叫。。。。。。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lady</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    Animal pet;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Lady</span><span class="params">(String name, Animal animal)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.pet = animal;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">petEnjoy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        pet.enjoy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h3><ul>
+<li><p>ab一个小bug: 本地访问URL不能用localhost</p>
+<ul>
+<li><figure class="highlight plain"><figcaption><span>invalid URL Usage: ab [options] [http[s]://]hostname[:port]/path```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 解决办法</span><br><span class="line">    * 改用```http://127.0.0.1:端口号/</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>默认并发数不足</p>
+<ul>
+<li>默认原始值为256</li>
+<li><figure class="highlight plain"><figcaption><span>Too many open files (24)```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 解决办法 ```ulimit -n 所需最大并发</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ ulimit -a</span><br><span class="line">    core file size          (blocks, -c) 0</span><br><span class="line">    data seg size           (kbytes, -d) unlimited</span><br><span class="line">    file size               (blocks, -f) unlimited</span><br><span class="line">    max locked memory       (kbytes, -l) unlimited</span><br><span class="line">    max memory size         (kbytes, -m) unlimited</span><br><span class="line">    open files                      (-n) 256</span><br><span class="line">    pipe size            (512 bytes, -p) 1</span><br><span class="line">    stack size              (kbytes, -s) 8192</span><br><span class="line">    cpu time               (seconds, -t) unlimited</span><br><span class="line">    max user processes              (-u) 1418</span><br><span class="line">    virtual memory          (kbytes, -v) unlimited</span><br><span class="line">$ ulimit -n 2000</span><br><span class="line">$ ulimit -a</span><br><span class="line">    core file size          (blocks, -c) 0</span><br><span class="line">    data seg size           (kbytes, -d) unlimited</span><br><span class="line">    file size               (blocks, -f) unlimited</span><br><span class="line">    max locked memory       (kbytes, -l) unlimited</span><br><span class="line">    max memory size         (kbytes, -m) unlimited</span><br><span class="line">    open files                      (-n) 2000</span><br><span class="line">    pipe size            (512 bytes, -p) 1</span><br><span class="line">    stack size              (kbytes, -s) 8192</span><br><span class="line">    cpu time               (seconds, -t) unlimited</span><br><span class="line">    max user processes              (-u) 1418</span><br><span class="line">    virtual memory          (kbytes, -v) unlimited</span><br></pre></td></tr></table></figure>
+<ul>
+<li>貌似这个最大并发为2w</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>无连接，未打开网站<ul>
+<li><figure class="highlight plain"><figcaption><span>reset by peer (54)```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 解决办法</span><br><span class="line">    * 后台服务器Run起来</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>$ ab -n 10000 -c 1000 <a href="http://127.0.0.1:8080/" target="_blank" rel="noopener">http://127.0.0.1:8080/</a></p>
+<p>Server Software:<br>Server Hostname:        127.0.0.1<br>Server Port:            8080</p>
+<p>Document Path:          /<br>Document Length:        51188 bytes</p>
+<p>Concurrency Level:      1000<br>Time taken for tests:   79.990 seconds<br>Complete requests:      10000<br>Failed requests:        0<br>Total transferred:      514000000 bytes<br>HTML transferred:       511880000 bytes<br>Requests per second:    125.02 [#/sec] (mean)<br>Time per request:       7999.024 [ms] (mean)<br>Time per request:       7.999 [ms] (mean, across all concurrent requests)<br>Transfer rate:          6275.18 [Kbytes/sec] received</p>
+<p>Connection Times (ms)<br>              min  mean[+/-sd] median   max<br>Connect:        0    3   8.9      0      40<br>Processing:   361 7700 1534.6   7740   14918<br>Waiting:      360 7699 1534.6   7738   14916<br>Total:        396 7703 1529.1   7740   14946</p>
+<p>Percentage of the requests served within a certain time (ms)<br>  50%   7740<br>  66%   8174<br>  75%   8500<br>  80%   8709<br>  90%   9313<br>  95%   9832<br>  98%  10509<br>  99%  11081<br> 100%  14946 (longest request)<br>```</p>
 <hr>
-<h4 id="几种说法"><a href="#几种说法" class="headerlink" title="几种说法"></a>几种说法</h4><ol>
-<li>Java语言中对象变量是多态的。如一个Employee变量既可以引用一个Employee类对象，也可以引用Employee类的任何一个子类的对象（Manager、Secretary、Programmer和Executive[单继承，通过Manager传递，Manager能引用Executive]）<br><br><strong>不能将超类的引用赋给子类变量，不是所有的超类(human)都是子类(scientist)。</strong></li>
-<li>将一个子类的引用赋给一个超类变量，编译器是允许的。但将一个超类的引用赋给一个子类变量，必须进行类型转换（1.只能在继承层次内进行类型转换；2.在将超类转换成子类之前，应该使用instanceOf进行检查）<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a <span class="keyword">instanceof</span> ClassB) &#123;</span><br><span class="line">    objectB = (ClassB)a;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<h3 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h3><ol>
+<li><a href="http://www.cnblogs.com/gumuzi/p/5617232.html" target="_blank" rel="noopener">Apache ab性能测试结果分析</a></li>
+<li><a href="http://blog.csdn.net/hexuan1/article/details/45191549" target="_blank" rel="noopener">运行ab测试时socket: Too many open files (24) 的解决办法</a></li>
 </ol>
 
       
@@ -515,8 +536,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/yinziang/2018/02/08/Tools-Intro-Maven/" rel="next" title="Maven本地配置">
-                <i class="fa fa-chevron-left"></i> Maven本地配置
+              <a href="/yinziang/2018/03/08/Algo-OJ-Others-4/" rel="next" title="算法&OJ--其他--动态规划">
+                <i class="fa fa-chevron-left"></i> 算法&OJ--其他--动态规划
               </a>
             
           </div>
@@ -524,10 +545,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/yinziang/2018/02/28/Tools-JUnit/" rel="prev" title="初学JUnit">
-                初学JUnit <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -675,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行时类型识别-RTTI-Run-Time-Type-Identification"><span class="nav-number">1.</span> <span class="nav-text">运行时类型识别(RTTI, Run-Time Type Identification)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class类"><span class="nav-number">2.</span> <span class="nav-text">Class类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多态的原理"><span class="nav-number">2.1.</span> <span class="nav-text">多态的原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class类的加载"><span class="nav-number">3.</span> <span class="nav-text">Class类的加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-number">4.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">4.1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#三个必要条件"><span class="nav-number">4.1.1.</span> <span class="nav-text">三个必要条件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态绑定"><span class="nav-number">4.2.</span> <span class="nav-text">动态绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动态绑定重要特性：易扩展性。"><span class="nav-number">4.2.1.</span> <span class="nav-text">动态绑定重要特性：易扩展性。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态绑定"><span class="nav-number">4.3.</span> <span class="nav-text">静态绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象转型-casting"><span class="nav-number">4.4.</span> <span class="nav-text">对象转型(casting)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#几种说法"><span class="nav-number">4.5.</span> <span class="nav-text">几种说法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#评价"><span class="nav-number">1.</span> <span class="nav-text">评价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到问题"><span class="nav-number">2.</span> <span class="nav-text">遇到问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考网站"><span class="nav-number">3.</span> <span class="nav-text">参考网站</span></a></li></ol></div>
             
 
           </div>

@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>https://yinziang.github.io/yinziang/yinziang/2018/02/08/Tools-Intro-Maven/</loc>
+    <lastmod>2018-03-13T12:46:16.521Z</lastmod>
+    <data>
+        <display>
+        <title>Maven本地配置</title>
+        <pubTime>2018-02-08T12:00:00.000Z</pubTime>
+        
+        <tag>Study</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://yinziang.github.io/yinziang/yinziang/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://yinziang.github.io/yinziang/yinziang/2018/03/13/Tools-ApacheAB/</loc>
+    <lastmod>2018-03-13T12:35:45.521Z</lastmod>
+    <data>
+        <display>
+        <title>ab - Apache HTTP server benchmarking tool</title>
+        <pubTime>2018-03-13T09:00:00.000Z</pubTime>
+        
+        <tag>Study</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://yinziang.github.io/yinziang/yinziang/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/03/08/Algo-OJ-Others-4/</loc>
     <lastmod>2018-03-08T08:31:56.651Z</lastmod>
     <data>
@@ -257,7 +297,7 @@
     <data>
         <display>
         <title>Categories</title>
-        <pubTime>2018-03-05T06:06:39.113Z</pubTime>
+        <pubTime>2018-03-13T12:30:13.565Z</pubTime>
         
          
         </display>
@@ -312,7 +352,7 @@
     <data>
         <display>
         <title>Tags</title>
-        <pubTime>2018-03-05T05:57:31.182Z</pubTime>
+        <pubTime>2018-03-13T12:29:57.498Z</pubTime>
         
          
         </display>
