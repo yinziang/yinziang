@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://yinziang.github.io/yinziang/yinziang/2018/04/14/Practice_tryAliCloud/</loc>
+    <lastmod>2018-04-16T15:29:18.627Z</lastmod>
+    <data>
+        <display>
+        <title>阿里云CentOS实践</title>
+        <pubTime>2018-04-14T08:00:00.000Z</pubTime>
+        
+        <tag>Study</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java Web" url="https://yinziang.github.io/yinziang/yinziang/categories/Java-Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/02/08/Tools-Intro-Maven/</loc>
-    <lastmod>2018-03-13T12:46:16.521Z</lastmod>
+    <lastmod>2018-03-13T12:46:16.000Z</lastmod>
     <data>
         <display>
         <title>Maven本地配置</title>
@@ -25,7 +45,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/03/13/Tools-ApacheAB/</loc>
-    <lastmod>2018-03-13T12:35:45.521Z</lastmod>
+    <lastmod>2018-03-13T12:35:45.000Z</lastmod>
     <data>
         <display>
         <title>ab - Apache HTTP server benchmarking tool</title>
@@ -45,7 +65,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/03/08/Algo-OJ-Others-4/</loc>
-    <lastmod>2018-03-08T08:31:56.651Z</lastmod>
+    <lastmod>2018-03-08T08:31:56.000Z</lastmod>
     <data>
         <display>
         <title>算法&OJ--其他--动态规划</title>
@@ -65,7 +85,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/03/05/Algo-OJ-Others-3/</loc>
-    <lastmod>2018-03-05T13:49:44.385Z</lastmod>
+    <lastmod>2018-03-05T13:49:44.000Z</lastmod>
     <data>
         <display>
         <title>算法&OJ--其他--OnlineJudge输入输出特辑</title>
@@ -85,7 +105,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/03/03/Algo-OJ-Others-1/</loc>
-    <lastmod>2018-03-05T06:11:14.423Z</lastmod>
+    <lastmod>2018-03-05T06:11:14.000Z</lastmod>
     <data>
         <display>
         <title>算法&OJ--其他--背包问题</title>
@@ -105,7 +125,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/02/28/JavaCore-1-polymorphism/</loc>
-    <lastmod>2018-03-05T06:09:12.637Z</lastmod>
+    <lastmod>2018-03-05T06:09:12.000Z</lastmod>
     <data>
         <display>
         <title>JavaCore 1.多态和运行时类别识别</title>
@@ -125,7 +145,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/02/28/Tools-JUnit/</loc>
-    <lastmod>2018-03-05T06:08:45.387Z</lastmod>
+    <lastmod>2018-03-05T06:08:45.000Z</lastmod>
     <data>
         <display>
         <title>初学JUnit</title>
@@ -145,7 +165,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/03/04/Algo-OJ-Others-2/</loc>
-    <lastmod>2018-03-04T14:24:28.545Z</lastmod>
+    <lastmod>2018-03-04T14:24:28.000Z</lastmod>
     <data>
         <display>
         <title>算法&OJ--其他--接水装水问题</title>
@@ -165,7 +185,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/28/MyPreparation/</loc>
-    <lastmod>2018-01-28T11:35:07.113Z</lastmod>
+    <lastmod>2018-01-28T11:35:07.000Z</lastmod>
     <data>
         <display>
         <title>春招准备</title>
@@ -187,7 +207,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/08/GitGuide/</loc>
-    <lastmod>2018-01-28T11:12:31.172Z</lastmod>
+    <lastmod>2018-01-28T11:12:31.000Z</lastmod>
     <data>
         <display>
         <title>Git Guide</title>
@@ -207,7 +227,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/19/ProjectWeekTwo/</loc>
-    <lastmod>2018-01-19T07:25:11.382Z</lastmod>
+    <lastmod>2018-01-19T07:25:11.000Z</lastmod>
     <data>
         <display>
         <title>SSM框架电商网站实训项目--第二周总结</title>
@@ -229,7 +249,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/12/ProjectWeekOne/</loc>
-    <lastmod>2018-01-12T06:56:45.554Z</lastmod>
+    <lastmod>2018-01-12T06:56:45.000Z</lastmod>
     <data>
         <display>
         <title>SSM框架电商网站实训项目--第一周总结</title>
@@ -251,7 +271,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/10/MyBatisFirstDemo/</loc>
-    <lastmod>2018-01-10T12:17:11.865Z</lastmod>
+    <lastmod>2018-01-10T12:17:11.000Z</lastmod>
     <data>
         <display>
         <title>MyBatis First Demo</title>
@@ -271,7 +291,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/09/workreport/</loc>
-    <lastmod>2018-01-10T00:48:34.222Z</lastmod>
+    <lastmod>2018-01-10T00:48:34.000Z</lastmod>
     <data>
         <display>
         <title>Work Report</title>
@@ -293,11 +313,11 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/categories/index.html</loc>
-    <lastmod>2018-01-09T13:17:45.717Z</lastmod>
+    <lastmod>2018-01-09T13:17:45.000Z</lastmod>
     <data>
         <display>
         <title>Categories</title>
-        <pubTime>2018-03-13T12:30:13.565Z</pubTime>
+        <pubTime>2018-03-26T13:41:49.753Z</pubTime>
         
          
         </display>
@@ -307,7 +327,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/07/NewStart/</loc>
-    <lastmod>2018-01-09T13:08:42.426Z</lastmod>
+    <lastmod>2018-01-09T13:08:42.000Z</lastmod>
     <data>
         <display>
         <title>New Start</title>
@@ -328,7 +348,7 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/2018/01/07/hello-world/</loc>
-    <lastmod>2018-01-07T11:55:46.547Z</lastmod>
+    <lastmod>2018-01-07T11:55:46.000Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
@@ -348,11 +368,11 @@
     
   <url>
     <loc>https://yinziang.github.io/yinziang/yinziang/tags/index.html</loc>
-    <lastmod>2018-01-07T11:00:21.957Z</lastmod>
+    <lastmod>2018-01-07T11:00:21.000Z</lastmod>
     <data>
         <display>
         <title>Tags</title>
-        <pubTime>2018-03-13T12:29:57.498Z</pubTime>
+        <pubTime>2018-03-26T13:41:49.754Z</pubTime>
         
          
         </display>
