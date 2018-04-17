@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Study," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="But all sunshines without shadow is not life at all.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tags">
-<meta property="og:url" content="https://yinziang.github.io/yinziang/tags/index.html">
+<meta name="description" content="Python爬虫的小项目">
+<meta name="keywords" content="Study">
+<meta property="og:type" content="article">
+<meta property="og:title" content="双色球爬虫项目">
+<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/04/11/Practice_spiderOnDoubleChromosphere/index.html">
 <meta property="og:site_name" content="Robert Yin">
-<meta property="og:description" content="But all sunshines without shadow is not life at all.">
+<meta property="og:description" content="Python爬虫的小项目">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-07T11:00:21.000Z">
+<meta property="og:updated_time" content="2018-04-17T13:38:27.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tags">
-<meta name="twitter:description" content="But all sunshines without shadow is not life at all.">
+<meta name="twitter:title" content="双色球爬虫项目">
+<meta name="twitter:description" content="Python爬虫的小项目">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yinziang.github.io/yinziang/tags/"/>
+  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/04/11/Practice_spiderOnDoubleChromosphere/"/>
 
 
 
 
 
-  <title>Tags | Robert Yin</title>
+  <title>双色球爬虫项目 | Robert Yin</title>
   
 
 
@@ -304,40 +305,258 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/04/11/Practice_spiderOnDoubleChromosphere/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Robert Yin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/yinziang/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Robert Yin">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 2 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/yinziang/tags/Study/" style="font-size: 30px; color: #111">Study</a> <a href="/yinziang/tags/Work/" style="font-size: 12px; color: #ccc">Work</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">双色球爬虫项目</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T16:00:00+08:00">
+                2018-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/yinziang/categories/Others/" itemprop="url" rel="index">
+                    <span itemprop="name">Others</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/yinziang/2018/04/11/Practice_spiderOnDoubleChromosphere/" class="leancloud_visitors" data-flag-title="双色球爬虫项目">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>Python爬虫的小项目</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li><p>需求</p>
+<ul>
+<li>爬取最近一期的双色球号码</li>
+<li>按固定格式推送到用户<ul>
+<li>“第2018040期 红 02 16 18 19 27 30 蓝 14”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>想法</p>
+<ul>
+<li>利用爬虫框架爬取<ul>
+<li>库 – requests、BeautifulSoup</li>
+</ul>
+</li>
+<li>调用短信发送框架快速发送<ul>
+<li>twilio短信发送平台</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h3><ul>
+<li><p>爬取</p>
+<ol>
+<li>直接爬取福彩官网”<a href="http://www.cwl.gov.cn" target="_blank" rel="noopener">http://www.cwl.gov.cn</a>“</li>
+<li>利用搜索引擎接口，搜索关键词然后获取结果<ul>
+<li>搜索接口<ul>
+<li>百度 – <a href="http://www.baidu.com/s?wd=keyword" target="_blank" rel="noopener">http://www.baidu.com/s?wd=keyword</a></li>
+<li>360  – <a href="http://www.so.com/s?q=keyword" target="_blank" rel="noopener">http://www.so.com/s?q=keyword</a></li>
+</ul>
+</li>
+<li>代码框架<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">keyword = <span class="string">"福彩双色球"</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    kv = &#123;<span class="string">'wd'</span> : keyword&#125;</span><br><span class="line">    r = requests.get(<span class="string">"http://www.baidu.com/s"</span>, params=kv)</span><br><span class="line">    print(r.request.url)</span><br><span class="line">    r.raise_for_status()</span><br><span class="line">    r.encoding = r.apparent_encoding</span><br><span class="line">    <span class="comment"># TODO</span></span><br><span class="line">    print(r.text[<span class="number">-500</span>:])</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">"爬取失败"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>信息提取</p>
+<ul>
+<li>BeautifulSoup库<ul>
+<li>查找标签然后固定提取目标信息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>短信发送<ul>
+<li><a href="https://www.twilio.com/" target="_blank" rel="noopener">Twilio官网</a><ul>
+<li>注册账号</li>
+<li>获取账户SID和AUTH(认证)标志</li>
+<li>建立第一个项目并获取免费手机号</li>
+</ul>
+</li>
+<li>代码框架<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 使用Twilio的免费手机号发送短信</span><br><span class="line">def send_sms(msg, my_number):</span><br><span class="line">    # 从官网获得以下信息</span><br><span class="line">    account_sid = &apos;xxxx&apos;</span><br><span class="line">    auth_token = &apos;xxxx&apos;</span><br><span class="line">    twilio_number = &apos;xxxx&apos; # 带世界级区号</span><br><span class="line"></span><br><span class="line">    client = Client(account_sid, auth_token)</span><br><span class="line">    try:</span><br><span class="line">        client.messages.create(to=my_number, from_=twilio_number, body=msg)</span><br><span class="line">        print(&apos;短信已经发送！&apos;)</span><br><span class="line">    except ConnectionError as e:</span><br><span class="line">        print(&apos;发送失败，请检查你的账号是否有效或网络是否良好！&apos;)</span><br><span class="line">        return e</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="遇到问题Bug"><a href="#遇到问题Bug" class="headerlink" title="遇到问题Bug"></a>遇到问题Bug</h3><ul>
+<li>BeautifulSoup库的API不熟</li>
+<li>电话号码格式<br>  <code>TwilioRestException: Unable to create record: The &#39;To&#39; number 1817127xxxx is not a valid phone number.</code><ul>
+<li>报错如上    </li>
+<li>加区号<ul>
+<li>“1817127xxxx” –&gt; “+861817127xxxx”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><ul>
+<li>不太熟悉BeautifulSoup库API，用的查找是硬代码</li>
+<li>部署及定期(如周二、周四、周日)推送功能还没有实现</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/yinziang/tags/Study/" rel="tag"># Study</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/yinziang/2018/03/13/Tools-ApacheAB/" rel="next" title="ab - Apache HTTP server benchmarking tool">
+                <i class="fa fa-chevron-left"></i> ab - Apache HTTP server benchmarking tool
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/yinziang/2018/04/14/Practice_tryAliCloud/" rel="prev" title="阿里云CentOS实践">
+                阿里云CentOS实践 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -346,6 +565,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -366,8 +589,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -443,6 +675,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#实际操作"><span class="nav-number">1.</span> <span class="nav-text">实际操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到问题Bug"><span class="nav-number">2.</span> <span class="nav-text">遇到问题Bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反思"><span class="nav-number">3.</span> <span class="nav-text">反思</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
