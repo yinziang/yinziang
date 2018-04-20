@@ -169,6 +169,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[算法&OJ--其他--数组特殊算法问题]]></title>
+    <url>%2Fyinziang%2F2018%2F01%2F10%2FAlgo-OJ-Others-5%2F</url>
+    <content type="text"><![CDATA[关于数组的特殊处理 快速排序的划分算法–Partition 奇偶排序 荷兰国旗算法 快速排序的划分算法–Partition 划分算法是快速排序的根本。划分数据就是根据选定特定值把数据分成两组，所有大于特定值的数据在一组，所有小于特定值的在一组 划分算法–实现A(前后双指针法) 由指向数组两端的指针low和high组成（假定左小右大） 执行以下循环直到指针相遇： low遍历到比特定值大停止 high遍历到比特定值小停止 若指针不相遇交换两个指针指向数值，low++，high– 划分算法–实现B 一前一后两个指针同时从左往右遍历 如果前指针遇到的数比主元小，则后指针右移一位，然后交换各自指向的数 奇偶排序 给定一个整数数组，请调整数组中数的顺序，使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。要求时间复杂度为O(n) 借鉴快速排序的划分过程，把奇数看做”比较小的数”，把偶数看做”比较大的数”，，比较条件从”和特定值的大小比较”换为奇偶判断 参考快速排序的划分算法，有 实现A: 前后双指针法1234567891011public void sortA(int[] array, int low, int high) &#123; while(low &lt; high) &#123; // low找到偶数 while(array[low]%2 == 1) &#123; low++;&#125; // high找到奇数 while(array[high]%2 == 0) &#123; high--;&#125; if(low &lt; high) &#123; swap(array, low, high); &#125; &#125;&#125; 实现B: 维护两个指针后指针i和前指针j 初始化，后指针i指向数组第一个元素的前一个位置，前指针j指向数组的第一个元素 前后指针均向右移动，前指针j先移动，如果前指针指向的元素是奇数，则令后指针i向右移动一位并交换j和j两指针所各自指向的元素1234567891011public void sortB(int[] array, int low, int high) &#123; int i = low - 1; for(int j=low; j&lt;high; j++) &#123; // array[j]指向奇数，交换 if(array[j]%2 == 1) &#123; i++; swap(array, i, j); &#125; &#125; swap(array, i+1, high);&#125; 荷兰国旗算法–Dutch National Flag Problem 现有n个红白蓝三种颜色的小球乱序排列在一起，请通过两两交换任意球，使得从左到右的球依次是红球、白球、蓝球 类似于快速排序的划分过程，采用前指针begin、中指针current和后指针end，其中begin和current从数组左边开始，end从数组右边开始，current指针遍历整个数组序列： 当current指针所指元素为0时，与begin指针所指的元素交换，之后current++，begin++ 当current指针所指元素为1时，不作任何交换，而后current++ 当current元素所指元素为2时，与end指针所指元素交换，之后end–Note：current指针和begin一起从0开始，current左边的元素肯定0或1，故而第一种情况，两指针均需递增一次；第三种情况，和end指针交换的元素不一定是0或1，所以current指针不变化 123456789101112131415161718192021222324public void sort(int[] array) &#123; int begin = 0; int current = 0; int end = array.length-1; while(current &lt; end) &#123; if(array[current] == 1) &#123; current++; &#125; else if(array[current] == 0) &#123; swap(array, current, begin); current++; begin++; &#125; else if(array[current] == 2) &#123; swap(array, current, end); end--; &#125; &#125;&#125;public void swap(int[] array, int a, int b) &#123; int numTmp = array[a]; array[a] = array[b]; array[b] = numTmp;&#125; 举一反三：给定一个只有R、G、B三种字符的字符串，请重新排列该字符串中的字符，使得新字符串中的各个字符的排列顺序是：R在前，G在中，B在后。要求空间复杂度为O(l)且只能遍历一次字符串]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Work Report]]></title>
     <url>%2Fyinziang%2F2018%2F01%2F09%2Fworkreport%2F</url>
     <content type="text"><![CDATA[小结截止到2018年1月9日，约两周的自学小结。 研一上学期的课程学习告一段落已经两个星期了。也算是自己摸索着准备春季实习招聘两周了 起初的计划是先准备一个项目，同时准备算法等基本功，同道小新又指导我搭建了个人博客，就计划着三驾马车并行 慢慢发现： 博客的整理比较花功夫，而且比较零散，牵一发而动全身，可以考虑周末抽出整块时间来做，平时还是以项目为主 算法的整理可以考虑先做，先纸质版打印出来练着，等练习充分了再抽空分块整理 项目的准备，现在处在学习阶段，各方面还不成熟，可以考虑其每天所花时间不超过50% 然后找已经拿到大厂offer的前辈，取经如下： 重视基础，项目次要 实习面试时项目经验缺乏，基础补充 常问自己，LeetCode、剑指Offer刷了吗？虚拟机看了吗？等等等等 定个小目标，年前 完成上述两个题库的常考题型，然后整理一遍 基本掌握SpringMVC、Spring、MyBatis框架项目，掌握Spring框架 掌握Java Core基本知识并刷题]]></content>

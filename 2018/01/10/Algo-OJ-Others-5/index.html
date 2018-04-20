@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Git版本控制关于Git版本控制的一些笔记，以及在windows下的一些常规操作">
+<meta name="description" content="关于数组的特殊处理   快速排序的划分算法–Partition 奇偶排序 荷兰国旗算法">
 <meta name="keywords" content="Study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Guide">
-<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/01/08/GitGuide/index.html">
+<meta property="og:title" content="算法&amp;OJ--其他--数组特殊算法问题">
+<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/01/10/Algo-OJ-Others-5/index.html">
 <meta property="og:site_name" content="Robert Yin">
-<meta property="og:description" content="Git版本控制关于Git版本控制的一些笔记，以及在windows下的一些常规操作">
+<meta property="og:description" content="关于数组的特殊处理   快速排序的划分算法–Partition 奇偶排序 荷兰国旗算法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-28T11:12:31.000Z">
+<meta property="og:updated_time" content="2018-04-20T14:31:44.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Guide">
-<meta name="twitter:description" content="Git版本控制关于Git版本控制的一些笔记，以及在windows下的一些常规操作">
+<meta name="twitter:title" content="算法&amp;OJ--其他--数组特殊算法问题">
+<meta name="twitter:description" content="关于数组的特殊处理   快速排序的划分算法–Partition 奇偶排序 荷兰国旗算法">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/01/08/GitGuide/"/>
+  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/01/10/Algo-OJ-Others-5/"/>
 
 
 
 
 
-  <title>Git Guide | Robert Yin</title>
+  <title>算法&OJ--其他--数组特殊算法问题 | Robert Yin</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/01/08/GitGuide/">
+    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/01/10/Algo-OJ-Others-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Robert Yin">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git Guide</h1>
+          <h1 class="post-title" itemprop="name headline">算法&OJ--其他--数组特殊算法问题</h1>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T19:17:04+08:00">
-                2018-01-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T16:00:00+08:00">
+                2018-01-10
               </time>
             
 
@@ -369,8 +369,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/yinziang/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
+                  <a href="/yinziang/categories/others/" itemprop="url" rel="index">
+                    <span itemprop="name">others</span>
                   </a>
                 </span>
 
@@ -386,7 +386,7 @@
 
           
           
-             <span id="/yinziang/2018/01/08/GitGuide/" class="leancloud_visitors" data-flag-title="Git Guide">
+             <span id="/yinziang/2018/01/10/Algo-OJ-Others-5/" class="leancloud_visitors" data-flag-title="算法&OJ--其他--数组特殊算法问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -417,49 +417,65 @@
       
 
       
-        <h3 id="Git版本控制"><a href="#Git版本控制" class="headerlink" title="Git版本控制"></a>Git版本控制</h3><p>关于Git版本控制的一些笔记，以及在windows下的一些常规操作<br><a id="more"></a></p>
-<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><h5 id="1-三棵树：工作目录、暂存区域和Git仓库"><a href="#1-三棵树：工作目录、暂存区域和Git仓库" class="headerlink" title="1. 三棵树：工作目录、暂存区域和Git仓库"></a>1. 三棵树：工作目录、暂存区域和Git仓库<br></h5><p>Working Directory &lt;-&gt; Stage(Index) &lt;-&gt; Repository(Head)<br>工作目录：平时存放项目的地方<br>暂存区域：一个文件，存放临时的改动，即将提交到仓库的列表信息<br>Git仓库：最终存放版本数据的位置(HEAD指针指向最新版本)</p>
-<h5 id="2-将每个版本独立保存"><a href="#2-将每个版本独立保存" class="headerlink" title="2. 将每个版本独立保存"></a>2. 将每个版本独立保存</h5><h5 id="3-Git管理的文件的三种状态"><a href="#3-Git管理的文件的三种状态" class="headerlink" title="3. Git管理的文件的三种状态"></a>3. Git管理的文件的三种状态</h5><ul>
-<li>已修改(modified)</li>
-<li>已暂存(staged)</li>
-<li>已提交(committed)</li>
-</ul>
-<hr>
-<h3 id="Git的工作流程"><a href="#Git的工作流程" class="headerlink" title="Git的工作流程"></a>Git的工作流程</h3><h4 id="一般工作流程"><a href="#一般工作流程" class="headerlink" title="一般工作流程"></a>一般工作流程</h4><ol>
-<li>在工作目录中添加、修改文件</li>
-<li>将需要进行版本管理的文件放入暂存区域</li>
-<li>将暂存区域的文件提交到Git仓库</li>
-</ol>
-<h5 id="1-在工作目录中添加、修改文件-自己操作"><a href="#1-在工作目录中添加、修改文件-自己操作" class="headerlink" title="1.在工作目录中添加、修改文件(自己操作)"></a>1.在工作目录中添加、修改文件(自己操作)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub&gt;cd MyProject</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git init</span><br><span class="line">Initialized empty Git repository in C:/Users/Administrator/Documents/GitHub/MyProject/.git/</span><br></pre></td></tr></table></figure>
-<h4 id="2-将需要进行版本管理的文件放入暂存区域-没提示信息即ok"><a href="#2-将需要进行版本管理的文件放入暂存区域-没提示信息即ok" class="headerlink" title="2.将需要进行版本管理的文件放入暂存区域(没提示信息即ok)"></a>2.将需要进行版本管理的文件放入暂存区域(没提示信息即ok)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git add README.md</span><br></pre></td></tr></table></figure>
-<h5 id="3-将暂存区域的文件提交到Git仓库"><a href="#3-将暂存区域的文件提交到Git仓库" class="headerlink" title="3.将暂存区域的文件提交到Git仓库"></a>3.将暂存区域的文件提交到Git仓库</h5><p>commit命令 双引号内是本次提交的说明</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git commit -m &quot;add a readme file&quot;</span><br><span class="line">[master (root-commit) cbdab70] add a readme file</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 README.md</span><br></pre></td></tr></table></figure>
-<h5 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h5><p> 将工作目录的文件放到Git仓库只需要两步</p>
+        <blockquote>
+<p>关于数组的特殊处理</p>
+</blockquote>
 <ul>
-<li>-git add 文件名</li>
-<li>-git commit -m “你干了啥，新版本注释”</li>
+<li>快速排序的划分算法–Partition</li>
+<li>奇偶排序</li>
+<li>荷兰国旗算法</li>
 </ul>
-<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-<p>显示Untracked files，工作目录新添加、修改的文件而未添加到暂存区域或提交到Git仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git add LICENSE</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   LICENSE</span><br></pre></td></tr></table></figure>
-<h4 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD</span><br></pre></td></tr></table></figure>
-<p>可以让最近一次提交到Git仓库的文件回到暂存区域</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD &lt;file&gt;</span><br></pre></td></tr></table></figure>
-<p>可以让file文件从Git仓库回到暂存区域</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git reset HEAD</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">        LICENSE</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git commit -m &quot;add a LICENSE file&quot;</span><br><span class="line">On branch master</span><br><span class="line">Untracked files:</span><br><span class="line">        LICENSE</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git add LICENSE</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   LICENSE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git commit -m &quot;add a readme file&quot;</span><br><span class="line">[master 9ceaa7a] add a readme file</span><br><span class="line"> 1 file changed, 19 insertions(+)</span><br><span class="line"> create mode 100644 LICENSE</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-<p>Note：红色表示在工作目录(?)；绿色表示在暂存区域，等待被提交。<br><br>是否？你查看了工作目录的status，那么文件就默认到暂存区域了，add就提交到Git仓库了</p>
-<h4 id="用提交到Git仓库的文件，覆盖工作目录的文件变化"><a href="#用提交到Git仓库的文件，覆盖工作目录的文件变化" class="headerlink" title="用提交到Git仓库的文件，覆盖工作目录的文件变化"></a>用提交到Git仓库的文件，覆盖工作目录的文件变化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
-<p>file，如”modified： LICENSE”</p>
-<h4 id="查看历史提交"><a href="#查看历史提交" class="headerlink" title="查看历史提交"></a>查看历史提交</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;git log</span><br><span class="line">commit 76b5f782d7443442233ae5e050d3c4c8f71968b7</span><br><span class="line">Author: 2011301060014@whu.edu.cn &lt;2011301060014@whu.edu.cn&gt;</span><br><span class="line">Date:   Thu Nov 9 09:00:45 2017 +0800</span><br><span class="line"></span><br><span class="line">    change the LICENSE file</span><br><span class="line"></span><br><span class="line">commit 9ceaa7aea9f293c1189d3bcaf42f653d102a905b</span><br><span class="line">Author: 2011301060014@whu.edu.cn &lt;2011301060014@whu.edu.cn&gt;</span><br><span class="line">Date:   Wed Nov 8 21:39:24 2017 +0800</span><br><span class="line"></span><br><span class="line">    add a readme file</span><br><span class="line"></span><br><span class="line">commit cbdab700463d0b214c6f4bb08cc6bba9d30fac41</span><br><span class="line">Author: 2011301060014@whu.edu.cn &lt;2011301060014@whu.edu.cn&gt;</span><br><span class="line">Date:   Wed Nov 8 20:45:23 2017 +0800</span><br><span class="line"></span><br><span class="line">    add a readme file</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator\Documents\GitHub\MyProject&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="回到过去"><a href="#回到过去" class="headerlink" title="回到过去"></a>回到过去</h4><p>参考”reset&amp;checkout.png”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">Working Directory-&gt;&gt;Stage: add</span><br><span class="line">Stage-&gt;&gt;Respository: commit</span><br><span class="line">Respository-&gt;&gt;Stage: reset</span><br><span class="line">Stage-&gt;&gt;Working Directory: checkout</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="附录-–-Windows初次使用Git前的配置"><a href="#附录-–-Windows初次使用Git前的配置" class="headerlink" title="附录 – Windows初次使用Git前的配置"></a>附录 – Windows初次使用Git前的配置</h4><p>在命令行模式里输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-git config -- global user.name &quot;username&quot;</span><br><span class="line">-git config -- global user.email &quot;mail&quot;</span><br></pre></td></tr></table></figure>
-<p>然后输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-<p>出现邮箱和用户名即ok</p>
+<a id="more"></a>
+<h3 id="快速排序的划分算法–Partition"><a href="#快速排序的划分算法–Partition" class="headerlink" title="快速排序的划分算法–Partition"></a>快速排序的划分算法–Partition</h3><ul>
+<li>划分算法是快速排序的根本。划分数据就是根据选定特定值把数据分成两组，所有大于特定值的数据在一组，所有小于特定值的在一组</li>
+<li>划分算法–实现A(前后双指针法)<ul>
+<li>由指向数组两端的指针low和high组成（假定左小右大）</li>
+<li>执行以下循环直到指针相遇：<ol>
+<li>low遍历到比特定值大停止</li>
+<li>high遍历到比特定值小停止</li>
+<li>若指针不相遇交换两个指针指向数值，low++，high–</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>划分算法–实现B<ul>
+<li>一前一后两个指针同时从左往右遍历</li>
+<li>如果前指针遇到的数比主元小，则后指针右移一位，然后交换各自指向的数</li>
+</ul>
+</li>
+</ul>
+<h3 id="奇偶排序"><a href="#奇偶排序" class="headerlink" title="奇偶排序"></a>奇偶排序</h3><blockquote>
+<p>给定一个整数数组，请调整数组中数的顺序，使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。要求时间复杂度为O(n)</p>
+</blockquote>
+<p>借鉴快速排序的划分过程，把奇数看做”比较小的数”，把偶数看做”比较大的数”，，比较条件从”和特定值的大小比较”换为奇偶判断</p>
+<p>参考快速排序的划分算法，有</p>
+<ul>
+<li><p>实现A:</p>
+<ul>
+<li>前后双指针法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sortA</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(low &lt; high) &#123;</span><br><span class="line">        <span class="comment">// low找到偶数</span></span><br><span class="line">        <span class="keyword">while</span>(array[low]%<span class="number">2</span> == <span class="number">1</span>) &#123; low++;&#125;</span><br><span class="line">        <span class="comment">// high找到奇数</span></span><br><span class="line">        <span class="keyword">while</span>(array[high]%<span class="number">2</span> == <span class="number">0</span>) &#123; high--;&#125;</span><br><span class="line">        <span class="keyword">if</span>(low &lt; high) &#123;</span><br><span class="line">            swap(array, low, high);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>实现B: </p>
+<ul>
+<li>维护两个指针后指针i和前指针j</li>
+<li>初始化，后指针i指向数组第一个元素的前一个位置，前指针j指向数组的第一个元素</li>
+<li>前后指针均向右移动，前指针j先移动，如果前指针指向的元素是奇数，则令后指针i向右移动一位并交换j和j两指针所各自指向的元素<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sortB</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = low - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=low; j&lt;high; j++) &#123;</span><br><span class="line">        <span class="comment">// array[j]指向奇数，交换</span></span><br><span class="line">        <span class="keyword">if</span>(array[j]%<span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            swap(array, i, j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    swap(array, i+<span class="number">1</span>, high);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="荷兰国旗算法–Dutch-National-Flag-Problem"><a href="#荷兰国旗算法–Dutch-National-Flag-Problem" class="headerlink" title="荷兰国旗算法–Dutch National Flag Problem"></a>荷兰国旗算法–Dutch National Flag Problem</h3><blockquote>
+<p>现有n个红白蓝三种颜色的小球乱序排列在一起，请通过两两交换任意球，使得从左到右的球依次是红球、白球、蓝球</p>
+</blockquote>
+<p>类似于快速排序的划分过程，采用前指针begin、中指针current和后指针end，其中begin和current从数组左边开始，end从数组右边开始，current指针遍历整个数组序列：</p>
+<ol>
+<li>当current指针所指元素为0时，与begin指针所指的元素交换，之后current++，begin++</li>
+<li>当current指针所指元素为1时，不作任何交换，而后current++</li>
+<li>当current元素所指元素为2时，与end指针所指元素交换，之后end–<br>Note：<br>current指针和begin一起从0开始，current左边的元素肯定0<br>或1，故而第一种情况，两指针均需递增一次；第三种情况，和end指针交换的元素不一定是0或1，所以current指针不变化</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public void sort(int[] array) &#123;</span><br><span class="line">    int begin = 0;</span><br><span class="line">    int current = 0;</span><br><span class="line">    int end = array.length-1;</span><br><span class="line"></span><br><span class="line">    while(current &lt; end) &#123;</span><br><span class="line">        if(array[current] == 1) &#123;</span><br><span class="line">            current++;</span><br><span class="line">        &#125; else if(array[current] == 0) &#123;</span><br><span class="line">            swap(array, current, begin);</span><br><span class="line">            current++;</span><br><span class="line">            begin++;</span><br><span class="line">        &#125; else if(array[current] == 2) &#123;</span><br><span class="line">            swap(array, current, end);</span><br><span class="line">            end--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void swap(int[] array, int a, int b) &#123;</span><br><span class="line">    int numTmp = array[a];</span><br><span class="line">    array[a] = array[b];</span><br><span class="line">    array[b] = numTmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>举一反三：给定一个只有R、G、B三种字符的字符串，请重新排列该字符串中的字符，使得新字符串中的各个字符的排列顺序是：R在前，G在中，B在后。要求空间复杂度为O(l)且只能遍历一次字符串</p>
 
       
     </div>
@@ -490,8 +506,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/yinziang/2018/01/07/NewStart/" rel="next" title="New Start">
-                <i class="fa fa-chevron-left"></i> New Start
+              <a href="/yinziang/2018/01/09/workreport/" rel="next" title="Work Report">
+                <i class="fa fa-chevron-left"></i> Work Report
               </a>
             
           </div>
@@ -500,8 +516,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/yinziang/2018/01/09/workreport/" rel="prev" title="Work Report">
-                Work Report <i class="fa fa-chevron-right"></i>
+              <a href="/yinziang/2018/01/10/MyBatisFirstDemo/" rel="prev" title="MyBatis First Demo">
+                MyBatis First Demo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -650,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git版本控制"><span class="nav-number">1.</span> <span class="nav-text">Git版本控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-number">2.</span> <span class="nav-text">Note</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-三棵树：工作目录、暂存区域和Git仓库"><span class="nav-number">2.0.1.</span> <span class="nav-text">1. 三棵树：工作目录、暂存区域和Git仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-将每个版本独立保存"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. 将每个版本独立保存</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Git管理的文件的三种状态"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. Git管理的文件的三种状态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git的工作流程"><span class="nav-number">3.</span> <span class="nav-text">Git的工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一般工作流程"><span class="nav-number">3.1.</span> <span class="nav-text">一般工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-在工作目录中添加、修改文件-自己操作"><span class="nav-number">3.1.1.</span> <span class="nav-text">1.在工作目录中添加、修改文件(自己操作)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-将需要进行版本管理的文件放入暂存区域-没提示信息即ok"><span class="nav-number">3.2.</span> <span class="nav-text">2.将需要进行版本管理的文件放入暂存区域(没提示信息即ok)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-将暂存区域的文件提交到Git仓库"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.将暂存区域的文件提交到Git仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实战"><span class="nav-number">3.2.2.</span> <span class="nav-text">实战</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看状态"><span class="nav-number">3.3.</span> <span class="nav-text">查看状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回滚"><span class="nav-number">3.4.</span> <span class="nav-text">回滚</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用提交到Git仓库的文件，覆盖工作目录的文件变化"><span class="nav-number">3.5.</span> <span class="nav-text">用提交到Git仓库的文件，覆盖工作目录的文件变化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看历史提交"><span class="nav-number">3.6.</span> <span class="nav-text">查看历史提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回到过去"><span class="nav-number">3.7.</span> <span class="nav-text">回到过去</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附录-–-Windows初次使用Git前的配置"><span class="nav-number">3.8.</span> <span class="nav-text">附录 – Windows初次使用Git前的配置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序的划分算法–Partition"><span class="nav-number">1.</span> <span class="nav-text">快速排序的划分算法–Partition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#奇偶排序"><span class="nav-number">2.</span> <span class="nav-text">奇偶排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#荷兰国旗算法–Dutch-National-Flag-Problem"><span class="nav-number">3.</span> <span class="nav-text">荷兰国旗算法–Dutch National Flag Problem</span></a></li></ol></div>
             
 
           </div>
