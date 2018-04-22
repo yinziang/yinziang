@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Study," />
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="But all sunshines without shadow is not life at all.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Robert Yin">
-<meta property="og:url" content="https://yinziang.github.io/yinziang/archives/2018/04/index.html">
+<meta name="description" content="缓存淘汰算法–LRU算法的实现">
+<meta name="keywords" content="Study">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法&amp;OJ--其他--LRU算法实现">
+<meta property="og:url" content="https://yinziang.github.io/yinziang/2018/03/19/Algo-OJ-Others-LRUImpl/index.html">
 <meta property="og:site_name" content="Robert Yin">
-<meta property="og:description" content="But all sunshines without shadow is not life at all.">
+<meta property="og:description" content="缓存淘汰算法–LRU算法的实现">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/WEB836406763bac89db8413991d8500b4ae?method=download&shareKey=420171bc197b8083b5ed831348d2c127">
+<meta property="og:updated_time" content="2018-04-22T14:16:54.681Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Robert Yin">
-<meta name="twitter:description" content="But all sunshines without shadow is not life at all.">
+<meta name="twitter:title" content="算法&amp;OJ--其他--LRU算法实现">
+<meta name="twitter:description" content="缓存淘汰算法–LRU算法的实现">
+<meta name="twitter:image" content="https://note.youdao.com/yws/api/personal/file/WEB836406763bac89db8413991d8500b4ae?method=download&shareKey=420171bc197b8083b5ed831348d2c127">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://yinziang.github.io/yinziang/archives/2018/04/"/>
+  <link rel="canonical" href="https://yinziang.github.io/yinziang/2018/03/19/Algo-OJ-Others-LRUImpl/"/>
 
 
 
 
 
-  <title>归档 | Robert Yin</title>
+  <title>算法&OJ--其他--LRU算法实现 | Robert Yin</title>
   
 
 
@@ -143,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,148 +305,230 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yinziang.github.io/yinziang/yinziang/2018/03/19/Algo-OJ-Others-LRUImpl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Robert Yin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/yinziang/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Robert Yin">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">算法&OJ--其他--LRU算法实现</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-19T16:00:00+08:00">
+                2018-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 21 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/yinziang/categories/Others/" itemprop="url" rel="index">
+                    <span itemprop="name">Others</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/yinziang/2018/03/19/Algo-OJ-Others-LRUImpl/" class="leancloud_visitors" data-flag-title="算法&OJ--其他--LRU算法实现">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/yinziang/2018/04/21/Project-CPSHelper-WeekOne/" itemprop="url">
-              
-                <span itemprop="name">校园助手"小关"--第一周</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-21T16:00:00+08:00"
-              content="2018-04-21" >
-          04-21
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/yinziang/2018/04/14/Practice_tryAliCloud/" itemprop="url">
-              
-                <span itemprop="name">阿里云CentOS实践</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-14T16:00:00+08:00"
-              content="2018-04-14" >
-          04-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/yinziang/2018/04/11/Practice_spiderOnDoubleChromosphere/" itemprop="url">
-              
-                <span itemprop="name">双色球爬虫项目</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-11T16:00:00+08:00"
-              content="2018-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <blockquote>
+<p>缓存淘汰算法–LRU算法的实现</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li>LRU<ul>
+<li>Least recently used, 最近最少使用</li>
+<li>根据数据的历史访问记录来进行淘汰数据</li>
+<li>其核心思想是”如果数据最近被访问过，那么将来被访问的几率也更高”<br><img src="https://note.youdao.com/yws/api/personal/file/WEB836406763bac89db8413991d8500b4ae?method=download&amp;shareKey=420171bc197b8083b5ed831348d2c127" alt="image"></li>
+</ul>
+</li>
+<li>实现保存缓存数据<ul>
+<li>循环数组实现的队列<ul>
+<li>数字在小范围的遍历很快</li>
+<li>队列实现LRU</li>
+</ul>
+</li>
+<li>链表<ul>
+<li>链表的插入和删除时间复杂度都为O(1)–&gt;用链表不用数组</li>
+<li>具体过程<ol>
+<li>新数据插入到链表头部 </li>
+<li>每当缓存命中(即缓存数据被访问)，则将数据移到链表头部</li>
+<li>当链表满的时候，将链表尾部的数据丢弃</li>
+</ol>
+</li>
+<li>分析 <ul>
+<li>【命中率】当存在热点数据时，LRU的效率很好，但偶发性的、周期性的批量操作会导致LRU命中率急剧下降，缓存污染情况比较严重</li>
+<li>【复杂度】实现简单</li>
+<li>【代价】  命中时需要遍历链表，找到命中的数据块索引，然后需要将数据移到头部</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LinkedHashMap<ul>
+<li>利用hashmap的特点–命中很快(是否在缓存中)</li>
+<li>双向链表的队列实现LRU<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRULinkedHashMap</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; <span class="keyword">extends</span> <span class="title">LinkedHashMap</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    <span class="comment">//定义缓存的容量--LinkedHashMap默认超过最大容量自动扩容，不存在remove eldest的问题</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> capacity;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">    <span class="comment">//带参数的构造器</span></span><br><span class="line">    LRULinkedHashMap(<span class="keyword">int</span> capacity)&#123;</span><br><span class="line">        <span class="comment">//调用LinkedHashMap的构造器，传入以下参数</span></span><br><span class="line">        <span class="keyword">super</span>(<span class="number">16</span>,<span class="number">0.75f</span>,<span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//传入指定的缓存最大容量</span></span><br><span class="line">        <span class="keyword">this</span>.capacity=capacity;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//实现LRU的关键方法，如果map里面的元素个数大于了缓存最大容量，则删除链表的顶端元素</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">removeEldestEntry</span><span class="params">(Map.Entry&lt;K, V&gt; eldest)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 每次增加都会调用该方法看是否需要remove eldest</span></span><br><span class="line">        System.out.println(eldest.getKey() + <span class="string">"="</span> + eldest.getValue());</span><br><span class="line">        <span class="keyword">return</span> size()&gt;capacity;</span><br><span class="line">        <span class="comment">/*return false;*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//测试类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="comment">//指定缓存最大容量为4</span></span><br><span class="line">        Map&lt;Integer,Integer&gt; map=<span class="keyword">new</span> LRULinkedHashMap&lt;&gt;(<span class="number">4</span>);</span><br><span class="line">        map.put(<span class="number">9</span>,<span class="number">3</span>);</span><br><span class="line">        map.put(<span class="number">7</span>,<span class="number">4</span>);</span><br><span class="line">        map.put(<span class="number">5</span>,<span class="number">9</span>);</span><br><span class="line">        map.put(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">        <span class="comment">//map.put(6,6);</span></span><br><span class="line">        <span class="comment">//总共put了5个元素，超过了指定的缓存最大容量</span></span><br><span class="line">        <span class="comment">//遍历结果</span></span><br><span class="line">        <span class="keyword">for</span>(Iterator&lt;Map.Entry&lt;Integer,Integer&gt;&gt; it = map.entrySet().iterator(); it.hasNext();)&#123;</span><br><span class="line">            System.out.println(it.next().getKey());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://blog.csdn.net/wangxilong1991/article/details/70172302" target="_blank" rel="noopener">缓存淘汰算法–LRU算法(java代码实现)</a></li>
+<li><a href="http://blog.csdn.net/u010506640/article/details/49006183" target="_blank" rel="noopener">理解LinkedHashMap实现LRU缓存</a></li>
+<li><a href="http://blog.csdn.net/justloveyou_/article/details/71713781" target="_blank" rel="noopener">Map 综述（二）：彻头彻尾理解 LinkedHashMap</a></li>
+</ul>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/yinziang/tags/Study/" rel="tag"># Study</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/yinziang/2018/03/13/Tools-ApacheAB/" rel="next" title="ab - Apache HTTP server benchmarking tool">
+                <i class="fa fa-chevron-left"></i> ab - Apache HTTP server benchmarking tool
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/yinziang/2018/03/26/Tools-MarkDownNote/" rel="prev" title="MarkDown学习">
+                MarkDown学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -450,6 +536,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -470,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -547,6 +646,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -701,6 +816,10 @@
 
 
   
+  <script type="text/javascript" src="/yinziang/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/yinziang/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
